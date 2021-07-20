@@ -1,0 +1,64 @@
+.admin-product-page .filter-section {
+    display: flex;
+    flex-direction: row;
+}
+
+.admin-product-page .filter-section .search-product {
+    margin-left: 10px;
+    border-bottom: 1px solid #616161;
+    height: 32px;
+}
+
+.admin-product-page .filter-section .form-field {
+    margin-bottom: 0px;
+}
+
+.admin-product-page .filter-section .topinput-admin {
+    font-size: 16px;
+}
+
+
+.admin-product-page .filter-section .btn-filter {
+    margin-left: 20px;
+    font-size: 16px;
+    color: white;
+    padding:4px 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: #003cff;
+}
+
+.admin-product-page .filter-section .btn-filter:hover{
+    cursor: pointer;
+    background-color: #0032d6;
+}
+
+.admin-product-page .no-data{
+    margin: 10px 0px;
+    font-size: 18px;
+    font-weight: 500;
+    width: 100%;
+}
+
+.admin-product-page h3{
+    margin-bottom: 8px;
+}
+
+.admin-product-page .add-product{
+    margin-bottom: 10px;
+}
+
+.admin-detail-product__upload-file--none{
+    display: none;
+}
+
+.admin-detail-product__upload-file--btn{
+    cursor: pointer;
+    padding: 5px;
+    color: white;
+    background-color: #003cff;
+}
+
+.admin-detail-product__upload-file--btn:hover{
+    background-color: #003cff;
+}

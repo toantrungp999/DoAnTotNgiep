@@ -1,0 +1,99 @@
+.register-page{
+    width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.register-page .title{
+    color: rgb(105, 158, 219);
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+.register-page form{
+    display: flex;
+    flex-direction: row;
+}
+
+.register-page .info-section{
+    width: 55%;
+}
+
+.register-page .address-section{
+    width: 45%;
+    margin-left: 20px;
+    text-align: left;
+}
+
+.register-page .address-section>label{
+    font-size: 16px;
+    color: #5f5f5f;
+    margin-left: 14px;
+    margin-bottom: 0px;
+    margin-top: 31px;
+}
+
+.register-page .btn-container{
+    text-align: center;
+}
+
+.register-page .btn-submit{
+    border: none;
+    text-transform: uppercase;
+    border-radius: 30px;
+    color: #ffffff;
+    font-weight: 500;
+    background-color: rgb(0, 140, 255);
+    padding: 6px 90px;
+    transition: all 0.3s ease-in-out;
+}
+
+.register-page .btn-submit:hover{
+    background-color: rgb(0, 117, 212);
+    padding: 6px 120px;
+}
+
+
+@media only screen and  (max-width: 900px) {
+    .register-page{
+        width: 100%;
+        padding: 0px 20px;
+    
+    }
+}
+
+@media only screen and  (max-width: 768px) {
+    .register-page{
+        width: 100%;
+        padding: 0px 20px;
+    
+    }
+
+    .register-page form{
+        flex-direction: column;
+    }
+
+    .register-page .info-section{
+        width: 100%;
+    }
+    
+    .register-page .address-section{
+        width: 100%;
+        margin-left: 0px;
+        text-align: left;
+    }
+
+    .register-page .address-section>label{
+        margin-top: 0px;
+        margin-left: 8px;
+        margin-bottom: 0px;
+    }
+
+    .register-page .btn-submit{
+        padding: 6px 0px;
+        width: 100%;
+    }
+}
+ 

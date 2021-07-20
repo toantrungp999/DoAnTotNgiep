@@ -1,0 +1,22 @@
+a{
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+b, strong {
+  font-weight: 600;
+}
+
+label{
+  margin: 0px;
+  padding: 0px;
+}
+
+._card-body {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 1.25rem;
+}

@@ -1,0 +1,6 @@
+<resources>
+    <string name="facebook_app_id">673086710276780</string>
+    <string name="fb_login_protocol_scheme">fb673086710276780</string>
+    <string name="server_client_id">1039038590000-2jrf04enlt5tcjk3ul2hnckukjctef2p.apps.googleusercontent.com</string>
+    <string name="app_name">TLCN_FashionStore</string>
+</resources>

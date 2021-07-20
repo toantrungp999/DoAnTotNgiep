@@ -1,0 +1,76 @@
+.cancel-order-dialog {}
+
+.cancel-order-dialog .dialog-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #0000004f;
+    z-index: 3;
+}
+
+.cancel-order-dialog .cancel-order-dialog-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 320px;
+    background-color: #FFFFFF;
+    padding: 8px 0px 15px 0px;
+    border-radius: 2px;
+    z-index: 10;
+    padding: 10px 15px;
+}
+
+.cancel-order-dialog .cancel-order-dialog-container .dialog-title {
+    color: #474747;
+}
+
+.cancel-order-dialog .cancel-order-dialog-container .btn-section {
+    margin-top: 20px;
+}
+
+.cancel-order-dialog .cancel-order-dialog-container .btn-section button {
+    color: rgb(255, 255, 255);
+    width: unset;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 5px 20px;
+    margin: 0px 10px;
+    border: none;
+    border-radius: 30px;
+    transition: all 0.3s ease-in-out;
+}
+
+.cancel-order-dialog .cancel-order-dialog-container .btn-section .btn-close {
+    background-color: rgb(168, 168, 168);
+}
+
+.cancel-order-dialog .cancel-order-dialog-container .btn-section .btn-close:hover {
+    background-color: rgb(94, 94, 94);
+    padding: 5px 28px;
+    margin: 0px 2px;
+    cursor: pointer;
+}
+
+.cancel-order-dialog .cancel-order-dialog-container .btn-section .btn-confirm {
+    background-color: rgb(194, 0, 0);
+}
+
+.cancel-order-dialog .cancel-order-dialog-container .btn-section .btn-confirm:hover {
+    background-color: rgb(146, 3, 3);
+    padding: 5px 28px;
+    margin: 0px 2px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 480px) {
+    .cancel-order-dialog .cancel-order-dialog-container .btn-section{
+        flex-direction: row;
+    }
+    .cancel-order-dialog .cancel-order-dialog-container .btn-section button {
+        width: unset;
+    }
+}

@@ -1,0 +1,219 @@
+.dialog-change-type-cart {
+    position: fixed;
+    top: 20px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #3b3b3b5e;
+    z-index: 7;
+}
+
+.dialog-change-type-cart .dialog {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(248, 248, 248);
+    padding: 20px 30px;
+    width: 40%;
+    min-width: 400px;
+}
+
+@media only screen and (max-width: 768px) {
+    .dialog-change-type-cart .dialog {
+        padding: 20px 15px;
+    }
+
+    .dialog-change-type-cart .dialog {
+        min-width: 320px;
+    }
+}
+
+/* size-section */
+.dialog-change-type-cart .sizes {
+    text-align: left;
+}
+
+.dialog-change-type-cart .sizes>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.dialog-change-type-cart .sizes .size {
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    background-color: #ffffff;
+    color: #696969;
+    padding-top: 2px;
+    width: 34px;
+    height: 34px;
+    font-size: 18px;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-radius: 30px;
+    border: 1px solid #c7c7c7;
+}
+
+.dialog-change-type-cart .sizes .size:hover {
+    cursor: pointer;
+    color: #363636;
+}
+
+.dialog-change-type-cart .sizes .size.check {
+    background-color: #474747;
+    color: #ffffff;
+}
+
+/* end-size-section */
+
+/* color-section */
+.dialog-change-type-cart .colors {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.dialog-change-type-cart .colors>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.dialog-change-type-cart .colors>div>* {
+    margin-right: 13.5px;
+    margin-left: 13.5px;
+}
+
+.dialog-change-type-cart .colors .color {
+    display: inline-block;
+    position: relative;
+    background-color: #ffffff;
+    color: #696969;
+    width: 27px;
+    height: 27px;
+    border-radius: 30px
+}
+
+.dialog-change-type-cart .colors .color>span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.dialog-change-type-cart .colors .color>span>img {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    transform: scale(110%, 110%);
+}
+
+.dialog-change-type-cart .colors .color::before {
+    position: absolute;
+    content: '';
+    top: -4px;
+    left: -4px;
+    width: 35px;
+    height: 35px;
+    border: 2px solid #e2e2e2;
+    border-radius: 30px;
+}
+
+.dialog-change-type-cart .colors .color:hover {
+    cursor: pointer;
+    color: #363636;
+}
+
+.dialog-change-type-cart .colors .color.check::before {
+    border-color: #474747;
+}
+
+/* end-color-section */
+
+/* quantity-section */
+.dialog-change-type-cart .quantity-section {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.dialog-change-type-cart .quantity-section  >div {
+    display: flex;
+    flex-direction: row;
+}
+
+.dialog-change-type-cart .quantity-section .message {
+    font-size: 15px;
+}
+
+/* end-quantity-section */
+
+/* price-section */
+.cart-page .dialog-change-type-cart .price-section {
+    margin-top: 15px;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+}
+
+.cart-page .dialog-change-type-cart .price-section h6{
+    text-align: left;
+    margin-bottom: 0px;
+}
+
+
+.cart-page .dialog-change-type-cart .price-section .orgin-price{
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+.cart-page .dialog-change-type-cart .price-section .price{
+    font-size: 18px;
+    margin-left: 5px;
+}
+/* end-price-section */
+
+/* brn-section */
+.dialog-change-type-cart .btn-section{
+    margin-top: 20px;
+}
+.dialog-change-type-cart .btn-section button{
+    border: none;
+    border-radius: 30px;
+    margin: 0px 10px;
+    text-transform: uppercase;
+    color: #ffffff;
+    padding: 5px 40px 4px 40px;
+    transition: all 0.3s ease-in-out;
+}
+
+.dialog-change-type-cart .btn-section button:hover{
+    margin: 0px 0px;
+    padding: 5px 50px 4px 50px;
+}
+
+
+
+.dialog-change-type-cart .btn-section .btn-update{
+    background-color: #1194ff;
+}
+
+.dialog-change-type-cart .btn-section .btn-update:hover{
+    background-color: #1175c7;
+}
+
+.dialog-change-type-cart .btn-section .btn-close{
+    background-color: #e7261f;
+}
+.dialog-change-type-cart .btn-section .btn-close:hover{
+    background-color: #bd2520;
+}
+
+@media only screen and (max-width: 768px) {
+    .dialog-change-type-cart .btn-section button{
+        padding: 5px 20px 4px 20px;
+    
+    }
+}
+/* end-btn-sectiom */

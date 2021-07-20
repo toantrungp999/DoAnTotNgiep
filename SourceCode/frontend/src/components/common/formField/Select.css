@@ -1,0 +1,165 @@
+
+
+.form-field {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 22px;
+  font-size: 16px;
+}
+
+.form-field.vertical {
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.form-field.vertical>label {
+  text-align: left;
+  margin-left: 5px;
+}
+
+.form-field>label {
+  text-align: right;
+  margin-right: 10px;
+  padding-top: 2px;
+  color: rgb(95, 95, 95);
+}
+
+.form-field>div {
+  flex-direction: column;
+  width: 100%;
+}
+
+/* invalid-section */
+
+.form-field>div>div.invalid-message {
+  font-size: 12px;
+}
+
+.form-field.invalid>label, .form-field.invalid>div>div {
+  color: #e22a2a;
+}
+
+.form-field.invalid>div>select, .form-field.invalid>div>input {
+  border: 1px solid #e22a2a;
+}
+
+.form-field.invalid>div>select:hover, .form-field.invalid>div>input:hover {
+  border: 1px solid #e22a2a;
+}
+
+.form-field.invalid>div>select:focus, .form-field.invalid>div>input:focus {
+  box-shadow: 0px 0px 1px #e22a2a;
+}
+
+.form-field>div{
+  position: relative;
+}
+
+.form-field>div>select, .form-field>div>input{
+  position: relative;
+  z-index: 2;
+}
+
+.form-field>div>div.invalid-message{
+  z-index: 1;
+  position: absolute;
+  left: 0px;
+  bottom: -20px;
+  animation-name: slide-down;
+  animation-duration: 0.4s;
+}
+
+@keyframes slide-down {
+  from {bottom: 0px;}
+  to {bottom: -15px}
+}
+
+/* end-invalid-section */
+
+.form-field>div>select {
+  padding: 3px 30px 3px 10px;
+  -webkit-appearance: none;
+}
+
+.form-field>div>input {
+  padding: 3px 10px 3px 13px;
+}
+
+.form-field>div>label {
+  padding: 3px 10px 3px 0px;
+}
+
+.form-field>div>select, .form-field>div>input {
+  border: none;
+  border: 1px solid #bfbfbf;
+  border-radius: 1px;
+  transition: all 0.2s ease-in-out;
+}
+
+.form-field>div>select:hover, .form-field>div>input:hover {
+  border: 1px solid #40a9ff;
+}
+
+.form-field>div>select:focus, .form-field>div>input:focus {
+  box-shadow: 0px 0px 1px #40a9ff;
+  outline-width: 0;
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .form-field {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+  .form-field>label {
+    width: 100% !important;
+    text-align: left;
+    margin-left: 5px;
+  }
+}
+
+/* select-section */
+.form-field>div>select {
+  width: 100%;
+}
+
+select option[data-default] {
+  color: #888;
+  display: none;
+}
+
+.form-field>div.select-wrapper {
+  position: relative;
+}
+
+.form-field>div.select-wrapper::before {
+  position: absolute;
+  content: "";
+  right: 16px;
+  top: 12px;
+  width: 2px;
+  height: 10px;
+  background-color: #888;
+  transform: rotate(-45deg);
+  z-index: 3;
+}
+
+.form-field>div.select-wrapper::after {
+  position: absolute;
+  content: "";
+  right: 10px;
+  top: 12px;
+  width: 2px;
+  height: 10px;
+  background-color: #888;
+  transform: rotate(45deg);
+  z-index: 3;
+}
+
+.form-field>div.select-wrapper:hover::after, .form-field>div.select-wrapper:hover::before {
+  background-color: #40a9ff;
+}

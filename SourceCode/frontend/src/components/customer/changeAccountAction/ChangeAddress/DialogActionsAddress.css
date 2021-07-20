@@ -1,0 +1,217 @@
+.dialog-address-container {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(88, 88, 88, 0.562);
+    z-index: 3;
+}
+
+.dialog-address {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 255, 255);
+    padding: 20px 15px 20px 20px;
+    z-index: 4;
+}
+
+.dialog-address {
+    display: flex;
+    flex-direction: row;
+}
+
+/* address-form-section */
+
+.dialog-address .address-form {
+    position: relative;
+    width: 40%;
+}
+
+@media only screen and (max-width: 768px) {
+    .dialog-address .address-form {
+        position: relative;
+        width: 100%;
+    }
+}
+
+.dialog-address .address-form .header-title {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.dialog-address .address-form .form-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.dialog-address .address-form .form-body .form-row {
+    margin-top: 10px;
+}
+
+.dialog-address .address-form .form-body .form-row label {
+    margin-bottom: 5px;
+}
+
+.dialog-address .address-form .btn-gps-mobile {
+    display: none;
+}
+
+.dialog-address .address-form .btn{
+    border: none;
+    border-radius: 30px;
+    color: #ffffff;
+    padding: 5px 15px;
+    margin: 0px 8px;
+    font-size: 15px;
+    transition: all 0.3s ease-in-out;
+}
+.dialog-address .address-form .btn:hover {
+    padding: 5px 23px;
+    margin: 0px 0px;
+}
+
+.dialog-address .address-form .btn-submit {
+    background-color: #0698fa;
+}
+
+.dialog-address .address-form .btn-submit:hover {
+    background-color: #0060a0;
+}
+
+.dialog-address .address-form .btn-close {
+    background-color: #d60a0a;
+}
+.dialog-address .address-form .btn-close:hover {
+    background-color: #830404;
+}
+
+@media only screen and (max-width: 768px) {
+    .dialog-address .address-form .btn-gps-mobile {
+        display: block;
+        border: 1px solid #4e95c4;
+        background-color: #ebf8ff;
+        border-radius: 30px;
+        padding: 3px 0px 2px 0px;
+        font-size: 16px;
+        color: #3b3b3b;
+    }
+}
+
+.dialog-address .address-form .btn-gps, .dialog-address .address-form .btn-update {
+    position: absolute;
+    left: 100%;
+    z-index: 2;
+    white-space: nowrap;
+    margin-left: 30px;
+    background-color: transparent;
+    border: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .dialog-address .address-form .btn-gps, .dialog-address .address-form .btn-update {
+        display: none;
+    }
+}
+
+.dialog-address .address-form .btn-gps:hover, .dialog-address .address-form .btn-update:hover {
+    cursor: pointer;
+}
+
+.dialog-address .address-form .btn-gps {
+    top: 83%;
+}
+
+.dialog-address .address-form .btn-update {
+    top: 72%;
+}
+
+.dialog-address .address-form .btn-gps::after, .dialog-address .address-form .btn-update::after {
+    position: absolute;
+    top: auto;
+    left: 100%;
+    bottom: auto;
+    overflow: hidden;
+    width: 0px;
+    border: none;
+    border-radius: 30px;
+    background-color: #808080;
+    color: #ffffff;
+    transition: all 0.2s ease-in-out;
+    margin-left: 4px;
+    margin-top: 8px;
+}
+
+.dialog-address .address-form .btn-gps::after {
+    content: 'Lấy vị trí hiện tại';
+}
+
+.dialog-address .address-form .btn-update::after {
+    content: 'Cập nhật bản đồ';
+}
+
+.dialog-address .address-form .btn-gps:hover::after {
+    width: 140px;
+}
+
+.dialog-address .address-form .btn-update:hover::after {
+    width: 140px;
+}
+
+.dialog-address .address-form .btn-gps .btn-gps-icon, .dialog-address .address-form .btn-update .btn-update-icon {
+    background-color: #ffffff;
+    border: none;
+    padding: 5px;
+    border-radius: 2px;
+    font-size: 28px;
+    border: 1px solid transparent;
+    box-shadow: 0px 0px 4px #dbdbdb;
+}
+
+.dialog-address .address-form .btn-gps .btn-gps-icon {
+    color: #5f5f5f;
+    /* border-color: #c00000; */
+}
+
+.dialog-address .address-form .btn-update .btn-update-icon {
+    color: #5f5f5f;
+    /* border-color: #0059ff; */
+}
+
+/* end-address-form-section */
+
+/* map-section */
+
+.dialog-address .map-section {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    .dialog-address .map-section {
+        display: none;
+    }
+}
+
+.dialog-address .map-section .map {
+    position: relative;
+    width: 100%;
+    height: 90%;
+}
+
+.dialog-address .map-section .map .infoBox {
+    transform: translateX(-50%) !important;
+    margin-top: 10px;
+    font-size: 15px;
+    background-color: rgb(138, 138, 138);
+    color: rgb(255, 255, 255);
+    padding-right: 3px;
+    padding-left: 3px;
+    border-radius: 30px;
+    overflow: visible;
+}

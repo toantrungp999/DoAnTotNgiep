@@ -1,0 +1,77 @@
+.order-detail-item-section {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5px 0px 5px 5px;
+    padding-right: 20px;
+}
+
+.order-detail-item-section .image {
+    width: 100px;
+    height: 100px;
+}
+.order-detail-item-section .image>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.order-detail-item-section .info {
+    flex-grow: 1;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+.order-detail-item-section .info .name {
+    text-align: left;
+    font-size: 15px;
+    font-weight: 500;
+    width: 95%;
+    color: #4b4b4b;
+    display: block;
+    /* white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; */
+}
+
+.order-detail-item-section .info .color-size-quantity {
+    display: flex;
+    flex-direction: row;
+}
+
+.order-detail-item-section .info .color-size-quantity .color-size {
+    font-size: 14px;
+    color: #9b9b9b;
+}
+
+.order-detail-item-section .info .color-size-quantity .quantity {
+    font-size: 14px;
+    margin-left: auto;
+    color: #3b3b3b;
+}
+
+.order-detail-item-section .info .quantity-instore {
+    text-align: right;
+    font-size: 14px;
+    font-weight: 400;
+    width: 100%;
+}
+
+.order-detail-item-section .info .price {
+    text-align: right;
+    font-size: 14px;
+    font-weight: 400;
+    width: 100%;
+}
+
+
+@media only screen and (max-width: 480px) {
+    .order-detail-item-section .image {
+        width:75px;
+        height: 75px;
+    }
+    .order-detail-item-section .info .name {
+        font-size: 13px;
+    }
+}

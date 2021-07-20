@@ -1,0 +1,231 @@
+:root {
+    --progressBarColor: #2dc258;
+}
+
+.order-progress-component{
+    width: 100%;
+}
+
+.progress-bar-container {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.progress-bar-container .progress-item{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.progress-bar-container .progress-item .progress-icon{
+    display: flex;
+    flex-direction: row;
+}
+
+.progress-bar-container .progress-item .progress-icon .line{
+    align-self: center;
+    flex-grow: 1;
+}
+
+.progress-bar-container .white-line {
+    height: 2px;
+    background-color: #ffffff;
+}
+
+.progress-bar-container .green-line {
+    height: 2px;
+    background-color: var(--progressBarColor);
+}
+
+.progress-bar-container .progress-item .progress-info{
+    display: flex;
+    flex-direction: column;
+}
+
+/* create */
+
+.order-progress-component .fa-receipt {
+    width: 40px;
+    height: 40px;
+    border: solid 2px var(--progressBarColor);
+    border-radius: 30px;
+    color: #2dc258;
+    font-size: 130%;
+    padding-top: 8px;
+}
+
+/* pass */
+
+.order-progress-component .fa-check {
+    width: 40px;
+    height: 40px;
+    border: solid 2px var(--progressBarColor);
+    border-radius: 30px;
+    color: var(--progressBarColor);
+    font-size: 130%;
+    padding-top: 8px;
+}
+
+/* cancel */
+
+.order-progress-component .fa-times {
+    width: 40px;
+    height: 40px;
+    border: solid 2px var(--progressBarColor);
+    border-radius: 30px;
+    color: var(--progressBarColor);
+    font-size: 130%;
+    padding-top: 8px;
+}
+
+/* pay */
+
+.order-progress-component .fa-money-bill-wave-alt {
+    width: 40px;
+    height: 40px;
+    border: solid 2px var(--progressBarColor);
+    border-radius: 30px;
+    color: var(--progressBarColor);
+    font-size: 130%;
+    padding-top: 8px;
+}
+
+/* approve */
+
+.order-progress-component .fa-clipboard-check {
+    width: 40px;
+    height: 40px;
+    border: solid 2px var(--progressBarColor);
+    border-radius: 30px;
+    color: var(--progressBarColor);
+    font-size: 130%;
+    padding-top: 6px;
+}
+
+/* fail */
+
+.order-progress-component .fa-exclamation {
+    width: 40px;
+    height: 40px;
+    border: solid 2px var(--progressBarColor);
+    border-radius: 30px;
+    color: var(--progressBarColor);
+    font-size: 130%;
+    padding-top: 8px;
+}
+
+.progress-bar-container .action {
+    font-size: 13px;
+    color: #414141;
+}
+
+.progress-bar-container .date {
+    font-size: 80%;
+    color: #8f8f8f;
+}
+
+.progress-bar-container .description {
+    font-size: 95%;
+    color: #575757;
+}
+
+.progress-bar-container .order-description {
+    display: none;
+}
+
+
+
+/* progress-dropdown-container-section */
+.progress-dropdown-container {
+    display: none;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    width: 100%;
+
+
+}
+
+.progress-dropdown-container .title{
+    text-align: left;
+    padding-left: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #868686;
+}
+
+.progress-dropdown-container p {  
+    width: 100%;
+
+}
+
+.progress-dropdown-container .progress-item{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+
+}
+
+.progress-dropdown-container .progress-item .progress-icon{
+    padding-left: 20px;
+    padding-right: 20px;
+    
+}
+
+.progress-dropdown-container .progress-item .progress-icon .line{
+    display: none;
+}
+
+.progress-dropdown-container .white-line {
+    display: none;
+}
+
+.progress-dropdown-container .green-line {
+    display: none;
+}
+
+.progress-dropdown-container .progress-info{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+}
+
+.progress-dropdown-container .action {
+    font-size: 15px;
+    color: #414141;
+}
+
+.progress-dropdown-container .date {
+    font-size: 14px;
+    color: #8f8f8f;
+}
+
+.progress-dropdown-container .description {
+    font-size: 14px;
+    color: #575757;
+}
+
+.progress-dropdown-container .order-description {
+    font-size: 14px;
+    color: #575757;
+}
+
+
+/* end-progress-dropdown-container-section */
+
+
+@media only screen and (max-width: 768px) {
+    .progress-bar-container{
+        display: none;
+    }
+    .progress-dropdown-container{
+        display: flex;
+        flex-direction: column;
+    }
+}

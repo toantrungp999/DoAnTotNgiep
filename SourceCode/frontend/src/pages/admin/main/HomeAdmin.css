@@ -1,0 +1,23 @@
+.home-admin-page {
+    display: flex;
+    flex-direction: row;
+}
+
+.admin-sidebar-container {
+    position: fixed;
+    width: 20%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding-top: 60px;
+
+}
+
+.admin-page-container {
+
+    width: 80%;
+    background-color: rgb(255, 255, 255);
+    padding: 0px 10px;
+    margin-left: 20%;
+    padding-top: 20px;
+}

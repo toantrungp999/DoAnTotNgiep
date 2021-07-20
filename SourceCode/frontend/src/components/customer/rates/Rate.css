@@ -1,0 +1,175 @@
+.rate-component {
+    width: 98%;
+    margin: 20px 1%;
+    padding: 10px;
+    border-radius: 1px;
+    box-shadow: 0px 0px 10px #dfdfdf;
+}
+
+.rate-component h4 {
+    position: relative;
+    color: #494949;
+}
+
+.rate-component h4:before {
+    position: absolute;
+    content: '';
+    width: 80px;
+    height: 2px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-135px,-50%);
+    background-color: #a3a3a3;
+
+}
+.rate-component h4::after {
+    position: absolute;
+    content: '';
+    width: 80px;
+    height: 2px;
+    top: 50%;
+    right:  50%;
+    transform: translate(135px,-50%);
+    background-color: #a3a3a3;
+
+}
+
+.rate-component .rate-item {
+    color: #494949;
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0px;
+}
+
+.rate-component .avatar {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    margin-top: 2px;
+    margin-right: 10px;
+}
+
+.rate-component .rate-item .rate-body {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+}
+
+.rate-component .rate-item .rate-body .main-content {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #ebebeb;
+    border-radius: 10px;
+    
+
+}
+
+.rate-component .name {
+    position: relative;
+    width: fit-content;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(29, 29, 29);
+}
+
+.rate-component .admin {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    margin-left: 5px;
+    white-space: nowrap;
+    font-size: 13px;
+    font-weight: 500;
+    color: #d40000;
+    
+}
+
+.rate-component .admin::before {
+    content: '●';
+    margin-right: 1px;
+    font-size: 14px;
+}
+
+
+.rate-component .stars {
+    margin-left: 0px;
+}
+
+.rate-component .stars>label {
+    float: left;
+}
+
+.rate-component .rate-content {
+    font-size: 14px;
+    white-space: pre-wrap;
+}
+
+.rate-component .reply {
+    font-size: 12px;
+    margin-left: 0px;
+}
+
+.rate-component .reply>a {
+    padding-left: 0px;
+    padding-right: 10px;
+}
+
+/* edit-section */
+
+.rate-component .form {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+   
+}
+
+
+.rate-component textarea {
+    border-radius: 10px;
+    padding-left: 10px;
+    margin-right: 10px;
+}
+
+
+
+.rate-component textarea:focus {
+    box-shadow: none;
+}
+
+.rate-component .btn-section{
+    width: 80px;
+}
+
+
+.rate-component .btn-save {
+    width: 100%;
+    font-size: 15px;
+    color: #ffffff;
+    background-color: #2b7df8;
+    border-radius: 30px;
+    height: 35px;
+    margin-bottom: 5px;
+}
+
+.rate-component .btn-save:hover {
+    background-color: #0443a1;
+}
+
+.rate-component .btn-close {
+    width: 100%;
+    color: #ffffff;
+    font-size: 15px;
+    background-color: #ff3e3e;
+    border-radius: 30px;
+    height: 35px;
+}
+
+.rate-component .btn-close:hover {
+    background-color: #a70404;
+}
+
+/* end-edit-section */
+

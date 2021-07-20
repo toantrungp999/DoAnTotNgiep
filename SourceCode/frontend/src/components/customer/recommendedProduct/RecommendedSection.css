@@ -1,0 +1,132 @@
+.recommended-section-component {
+    width: 100%;
+    margin-top: 60px;
+}
+
+.recommended-section-component>.title {
+    position: relative;
+}
+
+.recommended-section-component>.title::before, .recommended-section-component>.title::after {
+    display: inline-block;
+    content: "";
+    height: 2px;
+    width: 60px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: black;
+    margin-bottom: 3px;
+}
+
+.recommended-section-component>.title span {
+    margin: 0px 20px;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 768px) {
+    .recommended-section-component>.title span {
+        font-size: 22px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .recommended-section-component>.title span {    
+        font-size: 18px;
+    }
+}
+
+.recommended-section-component>.title span a {
+    color: black;
+}
+
+.recommended-section-component>.title span a.disable {
+    pointer-events: none;
+    cursor: default;
+}
+
+.recommended-section-component>.description {
+    font-style: italic;
+    font-family: Libre Baskerville;
+    font-size: 18px;
+    color: rgb(129, 129, 129);
+}
+
+.recommended-section-component>.products {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.recommended-section-component>.products .menu-wrapper{
+    overflow: hidden !important;
+}
+
+.recommended-section-component>.products .menu-wrapper .menu-wrapper--inner{
+    
+}
+
+
+.recommended-section-component>.products .horizontal-menu {
+    width: 100%;
+}
+
+.recommended-section-component>.products .menu-item-wrapper {
+    width: 25%;
+    position: relative;
+    padding: 0px 1.5%;
+    vertical-align: top;
+}
+
+.recommended-section-component>.products .menu-item-wrapper .product-item-section {
+    width: 100%;
+    position: relative;
+    /* margin: 0px 1.5%; */
+
+}
+
+.recommended-section-component>.products .menu-item-wrapper .product-item-section .title{
+    white-space: normal;
+}
+
+@media only screen and (max-width: 1000px) and (min-width: 768px) {
+    .recommended-section-component>.products .menu-item-wrapper {
+        width: 33.333%;
+        padding: 0px 2%;
+  
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .recommended-section-component>.products .menu-item-wrapper {
+        width: 50%;
+        padding: 0px 2.5%;
+
+    }
+}
+
+.recommended-section-component .product-item-section .img-section:hover+.more-info-section {
+    visibility: hidden;
+    opacity: 1;
+}
+
+.recommended-section-component .arrow {
+    position: absolute;
+    z-index: 2;
+    font-size: 20px;
+    background-color: #00000057;
+    padding: 20px 5px;
+    transform: translateY(-100%);
+}
+
+.recommended-section-component .arrow-left {
+    left: 0;
+}
+
+.recommended-section-component .arrow-right {
+    right: 0;
+}

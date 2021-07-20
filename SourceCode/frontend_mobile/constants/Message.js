@@ -1,0 +1,12 @@
+export const DISCONNECT_VN = "Không kết nối được với server!";
+export const CHECK_LENGTH_MAX_VN = "phải có độ dài nhỏ hơn hoặc bằng";
+export const CHECK_LENGTH_MIN_VN = "phải có độ dài lớn hơn hoặc bằng";
+export const CHARACTER_VN = "ký tự";
+export const INVALID_TOKEN_VN = "Sai token";//Access Denied
+export const ACCESS_DENIED_VN = "Truy cập bị từ chôi-Không đủ quền truy cập";//Invalid refresh token.
+export const EXPIRES_TOKEN_VN = "Hết hạn token";
+export const EMAIL_PASSWORD_NOT_CORRECT_VN = "Email hoặc mật khẩu không đúng";
+export const PASSWORD_NOT_CORRECT_VN = "Mật khẩu không đúng";
+export const EMAIL_NOT_FOUND_VN = "Tài khoản không tồn tại";
+export const EMAIL_ALREADY_EXIST_VN = "Email đã được sử dụng";
+export const ACCOUNT_HAS_BEEN_BLOCK_VN = "Tài khoản đã bị khóa";

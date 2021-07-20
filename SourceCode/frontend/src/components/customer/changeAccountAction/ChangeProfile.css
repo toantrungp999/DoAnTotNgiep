@@ -1,0 +1,158 @@
+.change-profile-page {}
+
+.change-profile-page .header{
+    margin-top: 15px;
+}
+
+.change-profile-page .header .title {
+    font-size: 18px;
+    font-weight: 500;
+    color: #777777;
+}
+
+.change-profile-page .header .description {
+    color: #979797;
+    border-bottom: 1px solid #eeeeee;
+    margin: 0px 80px;
+    padding-bottom: 5px;
+}
+
+
+
+.change-profile-page .body {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.change-profile-page .body .info {
+    width: 60%;
+}
+
+.change-profile-page .body .info .btn-submit {
+    border: solid 1px transparent;
+    background-color: #0084ff;
+    color: #ffffff;
+    border-radius: 30px;
+    padding: 5px 20px 3px;
+    transition: all 0.3s ease-in-out;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.change-profile-page .body .info .btn-submit:hover {
+    background-color: #006dd3;
+    cursor: pointer;
+    padding: 5px 30px 3px;
+}
+
+.change-profile-page .body .avatar {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin: 0px auto;
+    max-width: 200px;
+    height: 100%;
+}
+
+.change-profile-page .body .avatar .avatar-img {
+    border-radius: 50%;
+    width: 144px;
+    height: 144px;
+}
+
+.change-profile-page .body .avatar .uploadfile {
+    display: none;
+}
+
+.change-profile-page .body .avatar .btn-choose {
+    position: relative;
+}
+
+.change-profile-page .body .avatar .btn-choose div {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
+    text-align: center;
+}
+
+.change-profile-page .body .avatar .btn-choose div::after {
+    position: absolute;
+    content: 'CHỌN ẢNH';
+    bottom: 20px;
+    left: 50%;
+    font-size: 12px;
+    border: solid 1px #ffffff;
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 3px 10px;
+    transform: translateX(-50%);
+}
+
+.change-profile-page .body .avatar .btn-choose:hover div {
+    display: block;
+    cursor: pointer;
+    background-color: #00000056;
+    animation-name: changeColor;
+    animation-duration: 0.5s;
+    z-index: 3;
+}
+
+@keyframes changeColor {
+    from {
+        background-color: #00000000;
+    }
+    to {
+        background-color: #00000056;
+    }
+}
+
+.change-profile-page .body .avatar .btn-upload {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #ffffff;
+    background-color: #86c3fc;
+    border: none;
+    border-radius: 30px;
+    text-transform: uppercase;
+    padding: 5px 10px 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+.change-profile-page .body .avatar .btn-upload:hover {
+    cursor: pointer;
+    padding: 5px 15px 3px;
+    background-color: #2a98ff;
+}
+
+@media only screen and (max-width: 768px) {
+    .change-profile-page .header .description {
+        margin: 0px 40px;
+    }
+    .change-profile-page .body {
+        flex-direction: column-reverse;
+    }
+    .change-profile-page .body .info {
+        width: 60%;
+        min-width: 480px;
+        margin: 0px auto;
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .change-profile-page .header .description {
+        font-size: 14px;
+        margin: 0px 0px;
+    }
+
+    .change-profile-page .body .info {
+        width: 100%;
+        min-width: auto;
+    }
+}

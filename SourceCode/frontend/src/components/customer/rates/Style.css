@@ -1,0 +1,122 @@
+
+.rate:not(:checked) > input {
+    position:absolute;
+    /* top:-9999px; */
+}
+.star{
+    display: none;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:0.8em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:16px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+    size: 10%;
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+
+.rate label{
+    margin: 0px;
+}
+
+/* Modified from: https://github.com/mukulkant/Star-rating-using-pure-css */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+
+.area-rate {
+    position: relative;
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid #d2d2dc;
+    border-radius: 11px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgb(249, 249, 250);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(212, 182, 212, 1);
+    box-shadow: 0px 0px 5px 0px rgb(161, 163, 164)
+}
+
+.rate{
+    text-align: left;
+    margin-left: 12px;
+}
+.media{
+    margin-top: 10px;
+    
+}
+.reply{
+    font-size: 11px;
+}
+
+.media-body{
+    margin-right: 5px;
+}
+
+.add-rate{
+    margin-bottom: 20px;
+}
+.rate-name{
+    margin-top: 1px;
+    font-weight: 620;
+}
+
+.pd-l-10{
+    padding-left: 10px;
+}
+.pd-l-5{
+    padding-left: 5px;
+}
+.edit-rate{
+    font-size: 13px;
+    margin-left: 3px;
+}
+
+.add-rate img{
+    margin-top: 30px;
+}
+
+.add-reply-rate img{
+    margin-top: 3px;
+}
+
+.font-size-12{
+    font-size: 12px;
+}
+
+.area-rate .content{
+    text-align: left;
+}
+
+.rate-star{
+    margin-right: 3px;
+}
+
+.rate-check{
+    color: rgb(255,199,0);
+}
+
+.rate-not-check{
+    color: rgb(204,204,204);
+}
+

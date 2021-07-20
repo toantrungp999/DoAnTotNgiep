@@ -1,0 +1,45 @@
+.statistics-page {}
+
+.statistics-page .form {
+    display: flex;
+    padding-top: 20px;
+}
+
+.statistics-page .form .type {
+    width: 400px;
+}
+
+.statistics-page .form .date {
+    width: 400px;
+}
+
+.statistics-page .form .btn-submit {
+    margin-top: 53px;
+    margin-left: 20px;
+    padding: 0px 30px;
+    height: 35px;
+    background-color: #3575ff;
+    color: #fff;
+}
+
+.statistics-page .form .btn-submit:hover {
+    background-color: #1d47a0;
+}
+
+.statistics-page .chart {
+    padding-top: 30px;
+}
+
+.statistics-page .table {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 60px;
+}
+
+.statistics-page .table .table-name th {
+    background-color: #a1b7d1;
+}
+
+.statistics-page .table .table-title th {
+    background-color: #e0e0e0;
+}

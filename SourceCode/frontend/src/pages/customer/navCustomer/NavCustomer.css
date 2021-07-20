@@ -1,0 +1,177 @@
+.nav-customer-page{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-customer{
+    position: fixed;
+    top: 0px;
+    padding-top: 50px;
+    left: 0px;
+    bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 250px;
+    background-color: #d1d1d1;
+    height: 100%;
+}
+
+.nav-customer-page .main-content{
+    padding-left: 260px;
+    flex-grow: 1;
+    padding-right: 10px;
+}
+
+.nav-customer .user-info{
+    margin-top: 40px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.nav-customer .user-info .user-name{
+    word-wrap: break-word;  
+    display: block;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+    
+}
+
+.nav-customer .user-info img.avatar-nav-left{
+    height: 60px;
+    width: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+}
+
+
+.nav-customer .account, .nav-customer .order{
+    margin-left: 10px;
+}
+
+.nav-customer .accounts{
+    margin-left: 45px;
+}
+.nav-customer .accounts>div{
+    margin-top: 10px;
+}
+
+.nav-customer .order{
+    margin-top: 10px;
+}
+
+.nav-customer a{
+    color: #414141;
+    transition: all 0.5s ease-in-out;
+}
+
+.nav-customer .fa-user{
+    color: #3966e4;
+    border: solid 1px #3966e4;
+    padding: 4px;
+    border-radius: 30px;
+}
+
+.nav-customer .fa-info{
+    color: #3966e4;
+    border: solid 1px #3966e4;
+    padding: 4px;
+    border-radius: 30px;
+}
+
+.nav-customer .icon{
+    color: #ffffff;
+    padding: 4px;
+    border-radius: 30px;
+    margin-right: 4px;
+}
+
+.nav-customer .icon.account{
+    background-color: #3c70ff;
+}
+
+.nav-customer .icon.info{
+    background-color: #8cc2ff;
+}
+
+.nav-customer .icon.address{
+    background-color: #ff8b76;
+}
+
+.nav-customer .icon.password{
+    background-color: #71ff4d;
+}
+
+.nav-customer .icon.phone{
+    background-color:  #ffcd62;
+}
+
+.nav-customer .icon.order{
+    background-color:#ff8640;
+}
+
+.nav-customer .active{
+    color: #3966e4;
+}
+
+.nav-customer .accounts .active{
+    margin-left: 20px;
+}
+
+.nav-customer .show-hide{
+    display: none;
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+    .nav-customer{
+        position: fixed;
+        top: 0px;
+        padding-top: 50px;
+        left: -250px;
+        width: 250px;
+        overflow: hidden;
+        transition: all 0.2s ease-in-out;
+        z-index: 3;
+    }
+
+    .nav-customer.is-show{
+        left: 0px;
+    }
+
+    .nav-customer .show-hide{
+        display: block;
+        position: fixed;
+        top: 80px;
+        left: 0px;
+        background-color: #1d1d1d8e;
+        color: #FFFFFF;
+        font-size: 20px;
+        padding: 10px 4px 10px 4px;
+        transition: all 0.2s ease-in-out;
+        z-index: 1;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+
+    .nav-customer .show-hide.is-show{
+        left: 250px;
+    }
+
+    .nav-customer-page .main-content{
+        padding: 0px 10px;
+        width: 100%;
+    }
+    
+  }

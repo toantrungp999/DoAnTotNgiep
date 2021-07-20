@@ -1,0 +1,127 @@
+.create-order-page {
+    width: 80%;
+    margin: 0px 10%;
+    position: relative;
+}
+
+@media only screen and (max-width: 768px) {
+    .create-order-page {
+        width: 96%;
+        margin: 0px 2%;
+    }
+
+}
+
+
+.create-order-page a.btn-back-create-order{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #006eff;
+}
+
+.create-order-page a.btn-back-create-order:hover{
+    color: #0a3875;
+}
+
+
+/* product-item-section */
+
+.create-order-page .product-section{
+    margin-bottom: 20px;
+}
+
+.create-order-page .product-item{
+    display: flex;
+    padding: 10px 5px;
+    border-bottom:1px solid #ececec;
+}
+
+.create-order-page .product-item.first{
+    border-top:1px solid #ececec;
+}
+
+.create-order-page .product-item img{
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+.create-order-page .product-item .product-info{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    flex-grow: 1;
+}
+
+.create-order-page .product-item .name{
+    font-size: 15px;
+    font-weight: 500;
+    color: #2c2c2c;
+}
+
+.create-order-page .product-item .type{
+    font-size: 14px;
+    font-weight: 500;
+    color: #5c5c5c;
+    background-color: #f3f3f3;
+    border-radius: 30px;
+    padding: 2px 14px;
+    width: fit-content;
+}
+
+.create-order-page .product-item .price-quantity{
+    display: flex;
+    align-items: baseline;
+}
+
+.create-order-page .product-item .orgin-price{
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+.create-order-page .product-item .price{
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.create-order-page .product-item .quantity{
+    font-size: 15px;
+    margin-left: auto;
+    color: #5f5f5f;
+}
+
+.create-order-page .product-item .total-price{
+    font-size: 14px;
+    margin-left: auto;
+    font-weight: 500;
+   
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+    .create-order-page .product-item img{
+        width: 80px;
+        height: 80px;
+    }
+
+    .create-order-page .product-info .name{
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .create-order-page .product-item img{
+        width: 70px;
+        height: 70px;
+    }
+
+    .create-order-page .product-info .name{
+        font-size: 13px;
+    }
+}
+
+/* end-product-item-section */

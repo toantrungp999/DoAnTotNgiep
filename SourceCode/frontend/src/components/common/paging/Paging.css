@@ -1,0 +1,76 @@
+.paging-component {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px 0px;
+}
+
+.paging-component ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 0px;
+}
+
+.paging-component .page {
+    margin: 0px 3px;
+}
+
+.paging-component .page.three-dots {
+    margin-top: 8px;
+}
+
+
+.paging-component .page a {
+    margin-top: 2px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    padding-top: 2px;
+    border: solid 1px #535353;
+    border-radius: 30px;
+    color: #494949;
+    transition: all 0.3 ease-in-out;
+    font-weight: 500;
+}
+
+.paging-component .page a:hover {
+    display: block;
+    border: solid 1px #008cff;
+    border-radius: 30px;
+    color: #008cff;
+    background-color: #ffffff;
+}
+
+.paging-component .page.active a {
+    margin-top: 0px;
+    display: block;
+    width: 34px;
+    height: 34px;
+    padding-top: 4px;
+    border: solid 1px #006eff;
+    border-radius: 30px;
+    color: #0066ff;
+    background-color: #f1f8ff;
+}
+
+@media only screen and (max-width: 480px) {
+
+    .paging-component .page.three-dots {
+        margin-top: 4px;
+    }
+    
+    .paging-component .page a {
+        width: 24px;
+        height: 24px;
+        padding-top: 1px;
+        font-size: 14px;
+    }
+    .paging-component .page.active a {
+        margin-top: 1px;
+        width: 26px;
+        height: 26px;
+        padding-top: 1px;
+        font-size: 14px;
+    }
+}

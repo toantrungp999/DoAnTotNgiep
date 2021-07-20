@@ -1,0 +1,178 @@
+.order-page{
+    width: 100%;
+}
+
+/* order-search-bar-section */
+.order-search-bar {
+    background: #e2e2e2;
+    display: flex;
+}
+
+.order-search-bar i {
+    width: 20px;
+    font-size: 16px;
+    margin: 12px;
+    margin-left: 20px;
+    color: #3f3f3f;
+}
+
+
+.order-search-bar input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    outline: none;
+}
+
+@media only screen and (max-width: 480px) {
+    .order-search-bar i {
+        width: 20px;
+        font-size: 14px;
+        margin: 12px;
+        margin-left: 20px;
+    }
+    
+    .order-search-bar input {
+        font-size: 14px;
+    }
+}
+
+/* end-order-search-bar-section */
+
+/* top-bar-section */
+
+.order-page-item {
+    width: 100%;
+    margin-top: 10px;
+    border: solid 1px #ffffff;
+    margin-right: 1px;
+    box-shadow: 0px 0px 2px rgb(175, 175, 175);
+}
+
+/* top-bar-section */
+
+.order-page-item .top-bar {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #dadada;
+    padding: 2px 5px 2px 5px;
+    margin: 0px 4px 0px 4px;
+}
+
+.order-page-item .top-bar .id {
+    padding-right: 15px;
+    padding-left: 15px;
+    border-right: solid 1px #dadada;
+}
+
+.order-page-item .top-bar .date {
+    padding-left: 15px;
+}
+
+.order-page-item .top-bar .status {
+    margin-left: auto;
+    color: #ce1800;
+    text-transform: uppercase;
+}
+
+@media only screen and (max-width: 480px) {
+    .order-page-item .top-bar {
+        font-size: 14px;
+    }
+    .order-page-item .top-bar .id {
+        padding-right: 5px;
+        padding-left: 5px;
+        align-self: center;
+    }
+    .order-page-item .top-bar .date {
+        padding-left: 5px;
+    }
+}
+
+/* top-bar-section-end */
+
+/* bottom-bar-section */
+
+.order-page-item .bottom-section {
+    display: flex;
+    flex-direction: row;
+    border-top: 1px solid #dadada;
+    padding: 6px 5px 2px 5px;
+    margin: 0px 4px 0px 4px;
+}
+
+.order-page-item .bottom-section .info {
+    display: flex;
+    flex-direction: column;
+    color: #666;
+    font-size: 14px;
+    text-align: left;
+}
+
+.order-page-item .bottom-section .price-section {
+    margin-left: auto;
+    text-align: end;
+    padding-bottom: 5px;
+}
+
+.order-page-item .bottom-section .price-section .ship, .order-page-item .bottom-section .price-section .total-price {
+    font-size: 14px;
+    color: #666;
+}
+
+.order-page-item .bottom-section .price-section .total {
+    font-size: 14px;
+    color: #242424;
+}
+
+.order-page-item .bottom-section .price-section .price {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.order-page-item .bottom-section .price-section .btn-detail {
+    padding: 2px 15px 1px 15px;
+    font-size: 14px;
+    border: none;
+    border: 1px solid #0083cf;
+    border-radius: 30px;
+    background-color: transparent;
+    color: #0088d6;
+    transition: all 0.2s ease-in-out;
+}
+
+.order-page-item .bottom-section .price-section .btn-detail:hover {
+    border: 1px solid #004b77;
+    color: #00456d;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 480px) {
+    .order-page-item .bottom-section .info {
+        font-size: 13px;
+        
+    }
+
+    .order-page-item .bottom-section .price-section .ship, .order-page-item .bottom-section .price-section .total-price {
+        font-size: 13px;
+        color: #666;
+    }
+
+    .order-page-item .bottom-section .price-section .price {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .order-page-item .bottom-section .info {
+        display: none;
+    }
+}
+
+/* bottom-bar-section-end */
+
+.order-page .no-data {
+    font-size: 18px;
+    font-weight: 500;
+    padding: 20px;
+}

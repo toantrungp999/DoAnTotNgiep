@@ -1,0 +1,18 @@
+.color-option{
+/*  */
+}
+
+.color-option__uploadfile--none{
+    display: none;
+}
+
+.color-option__uploadfile--btn{
+    cursor: pointer;
+    padding: 5px;
+    color: black;
+    background-color: #fff;
+}
+
+.color-option__uploadfile--btn:hover{
+    background-color: antiquewhite;
+}

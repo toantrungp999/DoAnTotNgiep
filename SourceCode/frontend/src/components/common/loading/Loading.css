@@ -1,0 +1,101 @@
+.loading-page {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.loading-page .loading1 {
+    position: absolute;
+    display: block;
+    top: 60px;
+    left: 50%;
+    font-size: 20px;
+    animation: spin1 2.5s infinite linear;
+}
+
+.loading-page .loading2 {
+    position: absolute;
+    display: block;
+    top: 60px;
+    left: 50%;
+    font-size: 35px;
+    animation: spin2 2s infinite linear;
+}
+
+.loading-page .loading3 {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    font-size: 50px;
+    animation: spin3 1.5s infinite linear;
+}
+
+@keyframes spin1 {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+        color: rgb(250, 146, 61);
+    }
+    50% {
+        color: rgb(255, 49, 49);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(359deg);
+        color: rgb(250, 146, 61);
+    }
+}
+
+@keyframes spin2 {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+        color: rgb(106, 255, 235);
+    }
+    50% {
+        color: rgb(192, 255, 109);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(-359deg);
+        color: rgb(106, 255, 235);
+    }
+}
+
+@keyframes spin3 {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+        color: rgb(31, 91, 255);
+    }
+    50% {
+        color: rgb(96, 191, 255);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(359deg);
+        color: rgb(31, 91, 255);
+    }
+}
+
+.loading-page .loading-text {
+    position: absolute;
+    display: block;
+    top: 110px;
+    left: 50%;
+    font-size: 18px;
+    transform: translate(-50%, -50%);
+    animation: loading-text 1.5s infinite linear;
+}
+
+@keyframes loading-text {
+    0% {
+        color: rgb(35, 31, 255);
+    }
+    25%{
+        color: rgb(31, 102, 255);
+    }
+    50% {
+        color: rgb(57, 159, 243);
+    }
+    75%{
+        color: rgb(31, 102, 255);
+    }
+    100% {
+        color: rgb(35, 31, 255);
+    }
+}

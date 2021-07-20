@@ -1,0 +1,267 @@
+.order-detail-page .order-detail {
+    width: 100%;
+}
+
+/* order-detail-info-section */
+
+.order-detail-page .order-detail-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-top: 2px solid #bee7fa;
+    border-bottom: 2px solid #bee7fa;
+  
+    padding-bottom: 5px;
+}
+
+.order-detail-page .order-detail-info .title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #868686;
+    margin-top: 5px;
+    text-align: left;
+}
+
+.order-detail-page .order-detail-info .customer-info-order-type {
+    display: flex;
+}
+
+.order-detail-page .order-detail-info .customer-info {
+    font-size: 15px;
+    margin-right: auto;
+}
+
+.order-detail-page .order-detail-info .customer-info>div {
+    margin-top: 3px;
+    margin-left: 5px;
+}
+
+.order-detail-page .order-detail-info .order-type {
+    width: 180px;
+    min-width: 180px;
+    font-size: 15px;
+    text-align: right;
+    color: #8a8a8a;
+}
+
+.order-detail-page .order-detail-info .order-type>div {
+    margin-top: 3px;
+    margin-right: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+    .order-detail-page .order-detail-info .order-type {
+        display: none;
+    }
+}
+
+/* end-order-detail-info-section */
+
+/* ship-info-section */
+
+.order-detail-page .ship-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.order-detail-page .ship-info .title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #868686;
+    margin-top: 5px;
+}
+
+.order-detail-page .ship-info .ship-brand {
+    color: #3b3b3b;
+    margin-left: 5px;
+    margin-top: 2px;
+}
+
+.order-detail-page .ship-info .from, .order-detail-page .ship-info .to, .order-detail-page .ship-info .receive-date {
+    font-size: 14px;
+    color: rgb(143, 143, 143);
+    margin-top: 3px;
+    margin-left: 5px;
+}
+
+.order-detail-page .ship-info div label {
+    color: #474747;
+    font-size: 15px;
+}
+
+/* .order-detail-page .ship-info .receive-date label {
+    font-size: 16px;
+} */
+
+/* end-ship-info-section */
+
+/* top-bar-section */
+
+.order-detail-page .order-detail {
+    width: 100%;
+    margin-top: 10px;
+    border: solid 1px #ffffff;
+    margin-right: 1px;
+    box-shadow: 0px 0px 2px rgb(175, 175, 175);
+}
+
+/* top-bar-section */
+
+.order-detail-page .order-detail .top-bar {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #dadada;
+    padding: 2px 5px 2px 5px;
+    margin: 0px 4px 0px 4px;
+}
+
+.order-detail-page .order-detail .top-bar .id {
+    padding-right: 15px;
+    padding-left: 15px;
+    border-right: solid 1px #dadada;
+}
+
+.order-detail-page .order-detail .top-bar .date {
+    padding-left: 15px;
+}
+
+.order-detail-page .order-detail .top-bar .status {
+    margin-left: auto;
+    color: #ce1800;
+    text-transform: uppercase;
+}
+
+@media only screen and (max-width: 480px) {
+    .order-detail-page .order-detail .top-bar {
+        font-size: 14px;
+    }
+    .order-detail-page .order-detail .top-bar .id {
+        padding-right: 5px;
+        padding-left: 5px;
+        align-self: center;
+    }
+    .order-detail-page .order-detail .top-bar .date {
+        padding-left: 5px;
+    }
+}
+
+/* top-bar-section-end */
+
+/* bottom-bar-section */
+
+.order-detail-page .bottom-section {
+    display: flex;
+    flex-direction: row-reverse;
+    border-top: 1px solid #dadada;
+    padding: 6px 5px 2px 5px;
+    margin: 0px 4px 0px 4px;
+}
+
+.order-detail-page .bottom-section .price-section {
+    text-align: end;
+    padding-bottom: 5px;
+    margin-left: auto;
+}
+
+.order-detail-page .bottom-section .price-section .ship, .order-detail-page .order-detail .bottom-section .price-section .total-price {
+    font-size: 14px;
+    color: #666;
+}
+
+.order-detail-page .bottom-section .price-section .total {
+    font-size: 14px;
+    color: #242424;
+}
+
+.order-detail-page .bottom-section .price-section .price {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 480px) {
+    .order-detail-page .bottom-section .info {
+        font-size: 13px;
+    }
+    .order-detail-page .bottom-section .price-section .ship, .order-detail-page .bottom-section .price-section .total-price {
+        font-size: 13px;
+        color: #666;
+    }
+    .order-detail-page .bottom-section .price-section .price {
+        font-size: 14px;
+    }
+}
+
+/* bottom-bar-section-end */
+
+/* btn-section */
+
+.order-detail-page .btn-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.order-detail-page button {
+    width: 160px;
+    padding: 6px 0px 5px 0px;
+    border: none;
+    margin: 0px 20px 20px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+    text-transform: uppercase;
+}
+
+.order-detail-page .btn-pay {
+    color: #ffffff;
+    background-color: #0098b3;
+}
+
+.order-detail-page .btn-pay:hover {
+    cursor: pointer;
+    background-color: #11aeca;
+}
+
+.order-detail-page .btn-cancel, .order-detail-page .btn-fail {
+    color: #ffffff;
+    background-color: #bd0000;
+}
+
+.order-detail-page .btn-cancel:hover, .order-detail-page .btn-fail:hover {
+    cursor: pointer;
+    background-color: #880b0b;
+}
+
+.order-detail-page .btn-approve, .order-detail-page .btn-pass {
+    width: 180px;
+    color: #ffffff;
+    background-color: #21a515;
+}
+
+.order-detail-page .btn-approve:hover, .order-detail-page .btn-pass:hover {
+    cursor: pointer;
+    background-color: #187010;
+}
+
+@media only screen and (max-width: 480px) {
+    .order-detail-page .btn-section {
+        flex-direction: column;
+    }
+
+    .order-detail-page button {
+        width: 90%;
+        margin-bottom: 10px;
+    }
+}
+
+/* end-btn-section */

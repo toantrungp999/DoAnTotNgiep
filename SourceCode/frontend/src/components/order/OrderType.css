@@ -1,0 +1,109 @@
+.create-order-page .ship.form-field .selected-ship-section {
+    /* width: 300px; */
+}
+
+.create-order-page .selected-ship-section {
+    width: 100%;
+    border: 1px solid #bee5ff;
+}
+
+.create-order-page .selected-ship-section:hover {
+    cursor: pointer;
+}
+
+.create-order-page .selected-ship-section .ship-brand {
+    text-align: center;
+}
+
+.create-order-page .selected-ship-section .ship-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #ec8e71;
+    z-index: 2;
+}
+
+.create-order-page .order-type-component {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 20px;
+}
+
+.create-order-page .order-type-section {
+    width: 60%;
+}
+
+.create-order-page .submit-section {
+    text-align: left;
+    margin-left: 30px;
+}
+.create-order-page .shipping-fee-section,.create-order-page .total-section  {
+    text-align: center;
+}
+
+.create-order-page .shipping-fee-section .label, .create-order-page .total-section .label {
+    display: inline-block;
+    font-size: 15px;
+    color: #666666;
+    width: 100px;
+    text-align: right;
+    margin-right: 5px;
+}
+
+.create-order-page .shipping-fee-section .shipping-fee {
+    font-size: 15px;
+    color: #313131;
+}
+
+.create-order-page .total-section .price {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.create-order-page .submit-section .btn-order {
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: #d60000;
+    padding: 5px 30px 5px 30px;
+    margin-left: 40px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 30px;
+    margin-top: 10px;
+}
+
+.create-order-page .submit-section .btn-order:hover {
+    padding: 5px 40px 5px 40px;
+    margin-left: 30px;
+    background-color: #b60000;
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .create-order-page .order-type-section {
+        width: 100%;
+    }
+    .create-order-page .order-type-component {
+        flex-direction: column;
+    }
+    .create-order-page .selected-ship-section .ship-info {
+        justify-content: space-evenly;
+    }
+    .create-order-page .submit-section {
+        width: 100%;
+        text-align: center;
+    }
+    .create-order-page .submit-section {
+        margin-left: auto;
+    }
+    .create-order-page .submit-section .btn-order {
+        margin-left: 0px;
+        padding: 5px 100px 5px 100px;
+    }
+    .create-order-page .submit-section .btn-order:hover {
+        margin-left: 0px;
+        padding: 5px 100px 5px 100px;
+    }
+}

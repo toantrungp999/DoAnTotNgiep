@@ -1,0 +1,26 @@
+.alert-component {
+    position: fixed;
+    width: fit-content;
+    top: 0;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 55px;
+}
+
+.alert-component>div {
+    width: fit-content;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 15px;
+    transition: all 0.4s ease-in-out;
+}
+
+.alert-component>div.hiding {
+    opacity: 0;
+    transform: translateY(-100%);
+}

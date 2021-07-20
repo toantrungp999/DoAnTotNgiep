@@ -1,0 +1,63 @@
+.product-section-component{
+    width: 100%;
+    margin-top: 60px;
+}
+
+.product-section-component >.title{
+    position: relative;
+}
+
+.product-section-component >.title::before, .product-section-component >.title::after{
+    display: inline-block;
+    content: "";
+    height: 2px;
+    width: 60px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: black;
+    margin-bottom: 3px;
+}
+
+.product-section-component >.title span{
+    margin: 0px 20px;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.product-section-component >.title span a{
+    color: black;
+}
+
+.product-section-component >.title span a.disable{
+    pointer-events: none;
+    cursor: default;
+}
+
+.product-section-component >.description{
+    font-style: italic;
+    font-family: Libre Baskerville;
+    font-size: 18px;
+    color: rgb(129, 129, 129);
+}
+
+.product-section-component >.products{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+}
+
+@media only screen and (max-width: 768px) {
+    .product-section-component >.title span{
+        font-size: 22px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .product-section-component >.title span{
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,173 @@
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+.sidebar-ul>li>a {
+    color: black;
+}
+
+#sidebar-admin {
+    background: #eeeeee;
+    width: 100%;
+    color: black;
+    transition: all 0.3s;
+    height: 100vmax;
+}
+
+#sidebar-admin ul p {
+    color: black;
+    padding: 10px;
+}
+
+#sidebar-admin ul li a {
+    padding: 10px;
+    font-size: 1em;
+    color: #333232;
+    display: block;
+}
+
+#sidebar-admin ul li a:hover {
+    color: #3a68cc;
+}
+
+#sidebar-admin ul li a.active {
+    color: #3a68cc;
+}
+
+#sidebar-admin ul li a i {
+    text-align: center;
+    border-radius: 30px;
+    color: #ffffff;
+    width: 30px;
+    height: 30px;
+}
+
+#sidebar-admin ul li a i.fa-receipt {
+    text-align: center;
+    background: #e42200;
+    font-size: 110%;
+    padding-top: 6px;
+}
+
+#sidebar-admin ul li a i.fa-users {
+    text-align: center;
+    background: #4763ff;
+    font-size: 110%;
+    padding-top: 6px;
+}
+
+#sidebar-admin ul li a i.fa-copyright {
+    text-align: center;
+    background: #636e00;
+    font-size: 120%;
+    padding-top: 5px;
+}
+
+#sidebar-admin ul li a i.fa-mobile-alt {
+    text-align: center;
+    background: #16bd00;
+    font-size: 120%;
+    padding-top: 5px;
+}
+
+#sidebar-admin ul li a i.fa-sync-alt {
+    text-align: center;
+    background: #e48100;
+    font-size: 120%;
+    padding-top: 5px;
+}
+
+#sidebar-admin ul li a i.fa-layer-group{
+    text-align: center;
+    background: #1f7174;
+    font-size: 110%;
+    padding-top: 6px;
+}
+
+#sidebar-admin ul li a i.fa-box-open{
+    text-align: center;
+    background: #278d4e;
+    font-size: 105%;
+    padding-top: 7px;
+}
+
+#sidebar-admin ul li a i.fa-tshirt{
+    text-align: center;
+    background: #24811b;
+    font-size: 100%;
+    padding-top: 7px;
+}
+
+#sidebar-admin ul li a i.fa-chart-area{
+    text-align: center;
+    background: #002da8;
+    font-size: 110%;
+    padding-top: 6px;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+a.article, a.article:hover {
+    background: #F5F5F5 !important;
+    color: black !important;
+}
+
+components>nav-item {
+    margin-top: 20px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+#ul-manager {
+    margin-top: 20px;
+    text-align: left;
+    padding-left: 15px;
+}
+
+#ul-manager>li {
+    margin-top: 8px;
+}
+
+#block {
+    margin: 0 auto;
+}
+
+#sidebar-admin .sidebar-header {
+    padding-top: 20px;
+    background: #eeeeee;
+}
+
+#sidebar-admin .sidebar-header div {
+    text-align: left;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    border-bottom: 1px solid rgb(230, 230, 230);
+    display: flex;
+    flex-direction: row;
+}
+
+#sidebar-admin .sidebar-header img {
+    border: 0px;
+    border-radius: 30px;
+}
+
+#sidebar-admin .sidebar-header .user-name {
+    width: 70%;
+    font-weight: 500;
+    word-wrap: break-word;
+    text-align: left;
+}

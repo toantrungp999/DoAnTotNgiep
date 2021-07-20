@@ -1,0 +1,50 @@
+ul.nav.nav-order-type a {
+    padding-top: 13px;
+    color: rgb(20, 20, 20);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 105%;
+}
+
+:root {
+    --nav-order-type-color: #d11a1a;
+  }  
+ul.nav.nav-order-type a:hover {
+    color: var(--nav-order-type-color);
+}
+
+ul.nav.nav-order-type a.active{
+    color: var(--nav-order-type-color);
+    border-bottom: 2px var(--nav-order-type-color) solid;
+}
+
+ul.nav.nav-order-type {
+    width: 100%;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+    height: 50px;
+    vertical-align: middle;
+}
+
+.order-detail-item div.name{
+    font-size: 110%;
+}
+
+.order-detail-item div.color-size,.order-detail-item div.quantity{
+    color: #696969;
+}
+
+.cancel-order-dialog{
+    width: 30%;
+}
+
+.cancel-order-dialog .modal-body{
+    padding-left: 60px;
+}
+
+.cancel-order-dialog .btn-danger{
+    background:#c51616;
+}
+
+.cancel-order-dialog .btn-danger:hover{
+    background:#af1414;
+}

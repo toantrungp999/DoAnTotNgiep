@@ -1,0 +1,121 @@
+.change-address-page {}
+
+.change-address-page .header {
+    margin-top: 15px;
+}
+
+.change-address-page .header .title {
+    font-size: 18px;
+    font-weight: 500;
+    color: #777777;
+}
+
+.change-address-page .header .description {
+    color: #979797;
+    border-bottom: 1px solid #eeeeee;
+    margin: 0px 100px;
+    padding-bottom: 5px;
+}
+
+.change-address-page .btn-add {
+    margin-top: 10px;
+    border: none;
+    padding: 3px 20px 3px;
+    transition: all 0.3s ease-in-out;
+    font-size: 14px;
+    font-weight: 500;
+    color: #ffffff;
+    border-radius: 30px;
+    background-color: #248aff;
+}
+
+.change-address-page .btn-add:hover {
+    cursor: pointer;
+    padding: 3px 30px 3px;
+    background-color: #1e67bb;
+}
+
+.change-address-page .body {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 90%;
+    margin-left: 5%;
+}
+
+.change-address-page .body .address-item {
+    display: flex;
+    width: 100%;
+    padding: 8px 0px 8px 10px;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+.change-address-page .body .address-item.first {
+    border-top: 1px solid #f3f3f3;
+}
+
+.change-address-page .body .address-item .address-string {
+    text-align: left;
+    color: #292929;
+    align-self: center;
+}
+
+.change-address-page .body .address-item .address-string:hover {
+    cursor: pointer;
+    color: #12447c;
+}
+
+.change-address-page .body .address-item .btn-edit, .change-address-page .body .address-item .btn-remove {
+    border: none;
+    padding: 0px;
+    background: transparent;
+    font-size: 20px;
+    padding: 0px 5px;
+}
+
+.change-address-page .body .address-item .btn-edit {
+    color: #0077ff;
+    margin-left: auto;
+}
+
+.change-address-page .body .address-item .btn-remove {
+    color: #cf0000;
+}
+
+.change-address-page .body .address-item .btn-edit:hover {
+    cursor: pointer;
+    color: #00408a;
+}
+
+.change-address-page .body .address-item .btn-remove:hover {
+    cursor: pointer;
+    color: #940000;
+}
+
+@media only screen and (max-width: 768px) {
+    .change-address-page .body {
+        width: 100%;
+        min-width: 100%;
+        margin-left: 0px;
+    }
+    .change-address-page .header .description {
+        margin: 0px 40px;
+    }
+    .change-address-page .body .address-item .address-string {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .change-address-page .body {
+        width: 100%;
+        min-width: 100%;
+        margin-left: 0px;
+    }
+    .change-address-page .header .description {
+        font-size: 14px;
+        margin: 0px 0px;
+    }
+    .change-address-page .body .address-item .address-string {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,10 @@
+module.exports = {
+    INPUT_DATA: -20,
+    NO_PERMISSION: -21,
+    NO_TOKEN: -22,
+    UNKNOWN_EEROR: -23,
+    INVALID_TOKEN: -303,
+    NO_PROVIDED_TOKEN: -304,
+    TOKEN_EXPIRED: -305,
+    REFRESH_TOKEN_FAIL: -405,
+}

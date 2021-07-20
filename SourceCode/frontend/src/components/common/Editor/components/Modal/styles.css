@@ -1,0 +1,78 @@
+/* parte transparente do modal */
+
+.modal-glass {
+  display: flex;
+  flex: 1;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,.5);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 2000;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-glass section {
+  display: block;
+  background: white;
+  margin: 20vh 0 10vh 0;
+  min-width: 60vw;
+  min-height: 160px;
+  padding: 35px;
+  position: relative;
+  overflow: auto;
+  text-align: center;
+}
+
+.modal-glass input {
+  margin-bottom: 15px;
+  min-width: 200px;
+  width: 80%;
+  height: 30px;
+  border: 1px solid #b4b4b4;
+}
+
+.modal-glass button {
+  height: 40px;
+  min-width: 100px;
+  max-width: 50%;
+  border: none;
+  border-radius: 10px;
+  margin: 0 10px 10px 10px;
+  background-color: #4682B4;
+  color: #F8F8FF;
+  font-family: 'Arial Black';
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.modal-glass button:hover {
+  background-color: #708090;
+}
+
+.modal-glass label {
+  font-family: 'Arial Black';
+  text-decoration: double;
+}
+
+.modal-closer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  position: fixed;
+  top: 10vh;
+  right: 3vw;
+  width: 40px;
+  height: 40px;
+  color: white;
+  font-weight: bolder;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.modal-closer:hover{
+  background-color: rgba(255,255,255,.5);
+}

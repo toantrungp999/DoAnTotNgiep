@@ -1,0 +1,26 @@
+.admin-order-page{
+    background: #eeeeee;
+}
+
+.order-item .order-item-bottom-bar.order-admin button.btn-cancel{
+    background: transparent;
+    border: 1px solid #750000;
+    border-radius: 3px;
+    background-color: #fff7f7;
+    color: #4b0000;
+    font-weight: 400;
+    font-size: 105%;
+    padding-left: 25px;
+    padding-right: 25px;
+    height: 40px;
+}
+
+.order-item .order-item-bottom-bar.order-admin button{
+    font-weight: 400;
+    font-size: 105%;
+    padding-left: 25px;
+    padding-right: 25px;
+    height: 40px;
+}
+
+

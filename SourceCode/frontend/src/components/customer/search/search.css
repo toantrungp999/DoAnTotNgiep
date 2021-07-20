@@ -1,0 +1,79 @@
+.header-search-container {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.header-search {
+    background-color: rgba(182, 182, 182, 0.911);
+    height: 50px;
+    border-top: 2px solid rgb(94, 204, 255);
+    display: flex;
+    flex-direction: row;
+}
+
+.header-search input {
+    height: 100%;
+    font-size: 1.2em;
+    width: 100%;
+    margin-left: 20px;
+    border: none;
+    background-color: transparent;
+}
+
+.header-search button {
+    height: 100%;
+    border: none;
+    margin-right: 20px;
+    background-color: transparent;
+}
+
+.header-search-container .search-suggest-container {
+    background-color: #b6b6b6e8;
+    padding: 0px 20px;
+}
+
+.header-search-container .search-suggest {
+    display: flex;
+    flex-direction: row;
+    border-top: 1px solid #979797;
+    width: 100%;
+    padding: 10px 5px
+}
+
+.header-search-container .search-suggest img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+}
+
+.header-search-container .search-suggest>span {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.header-search-container .search-suggest .name {
+    font-size: 15px;
+    color: #2c2c2c;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+}
+
+.header-search-container .search-suggest .name:hover {
+    color: #008cc4;
+}
+
+.header-search-container .search-suggest .orgin-price {
+    font-size: 14px;
+    color: #646464;
+    margin-right: 5px;
+}
+
+.header-search-container .search-suggest .price {
+    font-size: 15px;
+    font-weight: 400;
+}

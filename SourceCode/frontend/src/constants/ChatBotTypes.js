@@ -1,0 +1,9 @@
+export const ASK_LOW_DELIVERY = 'ask_slow_delivery';
+export const ASK_BEST_RATE = 'best_rate';
+export const ASK_BEST_VIEW = 'best_view';
+export const ASK_BEST_SELL = 'best_sell';
+export const ASK_BRANDS = 'ask_brands';
+export const ASK_CATEGORIES = "ask_categories";
+export const ASK_PRODUCT = "ask_product";
+export const ASK_PERSON_BOT_CARE = "person_bot_care";
+export const ASK_HOW_TO_BUY = "ask_how_to_buy";

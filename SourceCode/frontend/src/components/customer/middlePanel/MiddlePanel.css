@@ -1,0 +1,201 @@
+.middle-panel-section {
+    position: relative;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.middle-panel-section::before {
+    content: "";
+    display: block;
+    padding-top: 30%;
+}
+
+.middle-panel-section.mobile{
+    display: none;
+}
+
+.middle-panel-section.mobile::before {
+    content: "";
+    display: block;
+    padding-top: 50%;
+}
+
+
+.middle-panel-section .box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    /*   display: flex;
+    align-items: center; */
+    line-height: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.middle-panel-section .panel-1, .middle-panel-section .panel-2 {
+    position: relative;
+    width: 47%;
+    margin: 0px 1.5%;
+    overflow: hidden;
+}
+
+.middle-panel-section.mobile .panel-1, .middle-panel-section.mobile .panel-2 {
+    width: 95%;
+    margin: 0px 2.5%;
+}
+
+
+@media only screen and (max-width: 1000px) and (min-width: 768px) {
+    .middle-panel-section .panel-1, .middle-panel-section .panel-2 {
+        width: 46%;
+        margin: 0px 2%;
+
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .middle-panel-section{
+        display: none;
+    }
+
+    .middle-panel-section.mobile{
+        display: block;
+    }
+
+   
+}
+  
+
+.middle-panel-section img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition-duration: 0.8s;
+}
+
+.middle-panel-section .panel-1:hover img, .middle-panel-section .panel-2:hover img{
+    transform: scale(115%);
+}
+
+.middle-panel-section .panel-1::before, .middle-panel-section .panel-2::before{
+    content: "";
+    position: absolute;
+    background-color: rgba(39, 39, 39, 0.356);
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 2;
+}
+
+.middle-panel-section .panel-text-1, .panel-text-2{
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    z-index: 3;
+}
+
+.middle-panel-section .panel-1 .panel-text-1{
+    top: 48%;
+    font-size: 3.8vw;
+    font-weight: 600;
+}
+
+.middle-panel-section .panel-1 .panel-text-2{
+    top: 60%;
+    font-size: 2.5vw;
+    font-weight: 500;
+    margin-top: 1vw;
+}
+
+.middle-panel-section .panel-2 .panel-text-1{
+    top: 47%;
+    font-size: 2.4vw;
+    font-weight: 500;
+}
+
+.middle-panel-section .panel-2 .panel-text-2{
+    top: 61%;
+    font-size: 4.5vw;
+    font-weight: 600;
+    margin-top: 1vw;    
+}
+
+
+.middle-panel-section.mobile .panel-1 .panel-text-1{
+    top: 48%;
+    font-size: 8vw;
+    font-weight: 600;
+}
+
+.middle-panel-section.mobile .panel-1 .panel-text-2{
+    top: 62%;
+    font-size: 4.5vw;
+    font-weight: 500;
+    margin-top: 1vw;
+}
+
+.middle-panel-section.mobile .panel-2 .panel-text-1{
+    top: 44%;
+    font-size: 4vw;
+    font-weight: 500;
+}
+
+.middle-panel-section.mobile .panel-2 .panel-text-2{
+    top: 58%;
+    font-size: 9vw;
+    font-weight: 600;
+    margin-top: 1vw;    
+}
+
+
+
+/* @media only screen and (max-width: 1000px) and (min-width: 768px) {
+    .middle-panel-section .panel-1 .panel-text-1{
+        font-size: 28px;
+        font-weight: 600;
+    }
+    
+    .middle-panel-section .panel-1 .panel-text-2{
+        font-size: 16px;
+        font-weight: 500;
+    }
+    
+    .middle-panel-section .panel-2 .panel-text-1{
+        font-size: 16px;
+        font-weight: 500;
+    }
+    
+    .middle-panel-section .panel-2 .panel-text-2{
+        font-size: 35px;
+        font-weight: 600;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .middle-panel-section .panel-1 .panel-text-1{
+        font-size: 20px;
+        font-weight: 600;
+    }
+    
+    .middle-panel-section .panel-1 .panel-text-2{
+        font-size: 13px;
+        font-weight: 500;
+    }
+    
+    .middle-panel-section .panel-2 .panel-text-1{
+        font-size: 13px;
+        font-weight: 500;
+    }
+    
+    .middle-panel-section .panel-2 .panel-text-2{
+        font-size: 28px;
+        font-weight: 600;
+    }
+} */

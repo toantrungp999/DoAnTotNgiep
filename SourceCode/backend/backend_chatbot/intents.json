@@ -1,0 +1,726 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hello",
+        "chao",
+        "chao ban",
+        "xin chao",
+        "ai o do khong",
+        "Hey"
+      ],
+      "responses": [
+        "Hello!",
+        "Xin chào!",
+        "Tôi có thể giúp gì cho bạn?"
+      ]
+    },
+    {
+      "tag": "boss2",
+      "patterns": [
+        "pham toan trung",
+        "pham toan trung la ai",
+        "ai la pham toan trung",
+        "17110395",
+        "0947902015",
+        "chu trang web"
+      ],
+      "responses": [
+        "Phạm Toàn Trung là chủ tịch tập đoàn sở hửu 99.99% cổ phần của chúng tôi."
+      ]
+    },
+
+    {
+      "tag": "ask_about_size_t_shirt",
+      "patterns": [
+        "cao m nang kg size ao thun bao nhieu phu hop",
+        "cao cm nang kg size ao thun bao nhieu phu hop",
+        "cao m nang kg vua size ao thun",
+        "cao cm nang kg vua size ao thun",
+
+        "cao m nang kg size ao thun nao phu hop",
+        "cao cm nang kg size ao thun nao phu hop",
+        "size ao thun cho nguoi cao m nang kg",
+        "size ao thun cho nguoi cao cm nang kg",
+        "size ao thun cao m nang kg",
+        "cao m nang kg phu hop size ao thun",
+        "cao cm nang kg phu hop size ao thun",
+
+        "cao m trong luong kg size ao thun bao nhieu phu hop",
+        "cao cm trong luong kg size ao thun bao nhieu phu hop",
+        "cao m trong luong kg vua size ao thun",
+        "cao cm trong luong kg vua size ao thun",
+
+        "cao m trong luong kg size ao thun nao phu hop",
+        "cao cm trong luong kg size ao thun nao phu hop",
+        "size ao thun cho nguoi cao m trong luong kg",
+        "size ao thun cho nguoi cao cm trong luong kg",
+        "size ao thun cao m trong luong kg",
+        "cao m trong luong kg phu hop size ao thun",
+        "cao cm trong luong kg phu hop size ao thun"
+      ],
+      "responses": [
+        "ask_about_size_t_shirt"
+      ]
+    },
+    {
+      "tag": "ask_about_size_shirt",
+      "patterns": [
+        "cao m nang kg size ao so mi bao nhieu phu hop",
+        "cao cm nang kg size ao so mi bao nhieu phu hop",
+        "cao m nang kg vua size ao so mi",
+        "cao cm nang kg vua size ao so mi",
+
+        "cao m nang kg size ao so mi nao phu hop",
+        "cao cm nang kg size ao so mi nao phu hop",
+        "size ao so mi cho nguoi cao m nang kg",
+        "size ao so mi cho nguoi cao cm nang kg",
+        "size ao so mi cao m nang kg",
+        "cao m nang kg phu hop size ao so mi",
+        "cao cm nang kg phu hop size ao so mi",
+
+        "cao m trong luong kg size ao so mi bao nhieu phu hop",
+        "cao cm trong luong kg size ao so mi bao nhieu phu hop",
+        "cao m trong luong kg vua size ao so mi",
+        "cao cm trong luong kg vua size ao so mi",
+
+        "cao m trong luong kg size ao so mi nao phu hop",
+        "cao cm trong luong kg size ao so mi nao phu hop",
+        "size ao so mi cho nguoi cao m trong luong kg",
+        "size ao so mi cho nguoi cao cm trong luong kg",
+        "size ao so mi cao m trong luong kg",
+        "cao m trong luong kg phu hop size ao so mi",
+        "cao cm trong luong kg phu hop size ao so mi"
+      ],
+      "responses": [
+        "ask_about_size_shirt"
+      ]
+    },
+    {
+      "tag": "ask_about_size_pants",
+      "patterns": [
+        "cao m nang kg size quan nao phu hop",
+        "cao cm nang kg size quan nao phu hop",
+        "size quan cho nguoi cao m nang kg",
+        "size quan cho nguoi cao cm nang kg",
+        "size quan cao m nang kg",
+        "cao m nang kg phu hop size quan",
+        "cao cm nang kg nao phu hop size quan",
+
+        "size quan cao 1m nang kg",
+        "size quan phu hop cao 1m nang kg",
+        "size quan bao nhieu phu hop cao 1m nang kg",
+        "size quan bao nhieu vua cao 1m nang kg",
+
+        "cao m trong luong kg size quan nao phu hop",
+        "cao cm trong luong kg size quan nao phu hop",
+        "size quan cho nguoi cao m trong luong kg",
+        "size quan cho nguoi cao cm trong luong kg",
+        "size quan cao m trong luong kg",
+        "cao m trong luong kg phu hop size quan",
+        "cao cm trong luong kg nao phu hop size quan",
+
+        "size quan cao 1m trong luong kg",
+        "size quan phu hop cao 1m trong luong kg",
+        "size quan bao nhieu phu hop cao 1m trong luong kg",
+        "size quan bao nhieu vua cao 1m trong luong kg"
+      ],
+      "responses": [
+        "ask_about_size_pants"
+      ]
+    },
+
+    {
+      "tag": "ask_about_size_man_t_shirt",
+      "patterns": [
+        "nam cao m nang kg vua size ao thun",
+        "nam cao cm nang kg vua size ao thun",
+        "nam cao m nang kg size ao thun nao phu hop",
+        "nam cao cm nang kg size ao thun nao phu hop",
+        "cao m nang kg phu hop size ao thun nam",
+        "cao cm nang kg nao phu hop size ao thun nam",
+        "size ao thun nam cao m nang kg",
+
+        "nam cao m trong luong kg vua size ao thun",
+        "nam cao cm trong luong kg vua size ao thun",
+        "nam cao m trong luong kg size ao thun nao phu hop",
+        "nam cao cm trong luong kg size ao thun nao phu hop",
+        "cao m trong luong kg phu hop size ao thun nam",
+        "cao cm trong luong kg nao phu hop size ao thun nam",
+        "size ao thun nam cao m trong luong kg",
+        "cao nang size ao thun nam"
+      ],
+      "responses": [
+        "ask_about_size_man_t_shirt"
+      ]
+    },
+    {
+      "tag": "ask_about_size_man_shirt",
+      "patterns": [
+        "nam cao m nang kg vua size ao so mi",
+        "nam cao cm nang kg vua size ao so mi",
+        "nam cao m nang kg size ao so mi nao phu hop",
+        "nam cao cm nang kg size ao so mi nao phu hop",
+        "cao m nang kg phu hop size ao so mi nam",
+        "cao cm nang kg nao phu hop size ao so mi nam",
+        "size ao so mi nam cao m nang kg",
+        "cao nang size ao si mi nam"
+      ],
+      "responses": [
+        "ask_about_size_man_shirt"
+      ]
+    },
+    {
+      "tag": "ask_about_size_man_pants",
+      "patterns": [
+        "nam cao m nang kg vua size quan",
+        "nam cao cm nang kg vua size quan",
+        "nam cao m nang kg size quan nao phu hop",
+        "nam cao cm nang kg size quan nao phu hop",
+        "cao m nang kg phu hop size quan nam",
+        "cao cm nang kg nao phu hop size quan nam",
+        "size quan nam cao m nang kg",
+
+        "nam cao m trong luong kg vua size quan",
+        "nam cao cm trong luong kg vua size quan",
+        "nam cao m trong luong kg size quan nao phu hop",
+        "nam cao cm trong luong kg size quan nao phu hop",
+        "cao m trong luong kg phu hop size quan nam",
+        "cao cm trong luong kg nao phu hop size quan nam",
+        "size quan nam cao m trong luong kg",
+        "cao nang size quan nam"
+      ],
+      "responses": [
+        "ask_about_size_man_pants"
+      ]
+    },
+
+    {
+      "tag": "ask_about_size_woman_t_shirt",
+      "patterns": [
+        "nu cao m nang kg vua size ao thun",
+        "nu cao cm nang kg vua size ao thun",
+        "nu cao m nang kg size ao thun nao phu hop",
+        "nu cao cm nang kg size ao thun nao phu hop",
+        "cao m nang kg phu hop size ao thun nu",
+        "cao cm nang kg nao phu hop size ao thun nu",
+        "size ao thun nu cao m nang kg",
+
+        "nu cao m trong luong kg vua size ao thun",
+        "nu cao cm trong luong kg vua size ao thun",
+        "nu cao m trong luong kg size ao thun nao phu hop",
+        "nu cao cm trong luong kg size ao thun nao phu hop",
+        "cao m trong luong kg phu hop size ao thun nu",
+        "cao cm trong luong kg nao phu hop size ao thun nu",
+        "size ao thun nu cao m trong luong kg",
+        "cao nang size ao thun nu"
+      ],
+      "responses": [
+        "ask_about_size_woman_t_shirt"
+      ]
+    },
+    {
+      "tag": "ask_about_size_woman_shirt",
+      "patterns": [
+        "nu cao m nang kg vua size ao so mi",
+        "nu cao cm nang kg vua size ao so mi",
+        "nu cao m nang kg size ao so mi nao phu hop",
+        "nu cao cm nang kg size ao so mi nao phu hop",
+        "cao m nang kg phu hop size ao so mi nu",
+        "cao cm nang kg nao phu hop size ao so mi nu",
+        "size ao so mi nu cao m nang kg",
+
+        "nu cao m trong luong kg vua size ao so mi",
+        "nu cao cm trong luong kg vua size ao so mi",
+        "nu cao m trong luong kg size ao so mi nao phu hop",
+        "nu cao cm trong luong kg size ao so mi nao phu hop",
+        "cao m trong luong kg phu hop size ao so mi nu",
+        "cao cm trong luong kg nao phu hop size ao so mi nu",
+        "size ao so mi nu cao m trong luong kg",
+        "cao nang size ao so mi nu"
+      ],
+      "responses": [
+        "ask_about_size_woman_shirt"
+      ]
+    },
+    {
+      "tag": "ask_about_size_woman_pants",
+      "patterns": [
+        "nu cao m nang kg vua size quan",
+        "nu cao cm nang kg vua size quan",
+        "nu cao m nang kg size quan nao phu hop",
+        "nu cao cm nang kg size quan nao phu hop",
+        "cao m nang kg phu hop size quan nu",
+        "cao cm nang kg nao phu hop size quan nu",
+        "size quan nu cao m nang kg",
+
+        "nu cao m trong luong kg vua size quan",
+        "nu cao cm trong luong kg vua size quan",
+        "nu cao m trong luong kg size quan nao phu hop",
+        "nu cao cm trong luong kg size quan nao phu hop",
+        "cao m trong luong kg phu hop size quan nu",
+        "cao cm trong luong kg nao phu hop size quan nu",
+        "size quan nu cao m trong luong kg"
+      ],
+      "responses": [
+        "ask_about_size_woman_pants"
+      ]
+    },
+
+    {
+      "tag": "person_bot_care",
+      "patterns": [
+        "ban co nguoi yeu chu",
+        "nguoi yeu ban ten gi",
+        "ai la nguoi ban nguong mo nhat",
+        "ban quan tam nhat den ai"
+      ],
+      "responses": [
+        "person_bot_care"
+      ]
+    },
+    {
+      "tag": "who_are_you",
+      "patterns": [
+        "ban co the giup toi chu",
+        "ban co nhung chuc nang gi",
+        "ban co the lam duoc nhung gi",
+        "ban co the giup gi cho toi",
+        "ban giup toi duoc chu",
+        "ban giup toi duoc khong",
+        "ban la ai",
+        "ban lam gi",
+        "ban ten gi"
+      ],
+      "responses": [
+        "Tôi là trợ lý ảo của trang web này! Tôi sẽ giúp bạn trả lời những câu hỏi đơn giản về sản phẩm tôi đang kinh doanh, giúp bạn tìm size phù hợp cho bản thân bạn. Nhắn tin tự động tới admin khi bạn có yêu cầu, cùng một số chức năng khác"
+      ]
+    },
+    {
+      "tag": "boss2",
+      "patterns": [
+        "lang trong ngon",
+        "17110239"
+      ],
+      "responses": [
+        "Thằng chó! Tao bắn mầy giờ nha mậy."
+      ]
+    },
+    {
+      "tag": "best_sell",
+      "patterns": [
+        "mua nhieu nhat",
+        "ban nhieu nhat",
+        "mua cao nhat",
+        "dat hang nhieu nhat"
+      ],
+      "responses": [
+        "best_sell"
+      ]
+    },
+    {
+      "tag": "best_view",
+      "patterns": [
+        "xem cao nhat",
+        "xem nhieu nhat",
+        "coi nhieu nhat",
+        "truy cap nhieu nhat",
+        "truy cap cao nhat"
+      ],
+      "responses": [
+        "best_view"
+      ]
+    },
+    {
+      "tag": "best_rate",
+      "patterns": [
+        "danh gia cao nhat",
+        "danh gia tot nhat",
+        "binh luan tot nhat"
+      ],
+      "responses": [
+        "best_rate"
+      ]
+    },
+    {
+      "tag": "time_delivery",
+      "patterns": [
+        "thoi gian giao hang",
+        "giao hang mat bao lau",
+        "co the chon thoi gian giao hang",
+        "giao trong duoc khong",
+        "bao lau thi nhan hang",
+        "bao lau thi giao hang",
+        "dat hang bao lau thi co",
+        "bao lau thi nhan duoc hang",
+        "bao nhieu thi nhan hang",
+        "bao nhieu thi giao hang",
+        "dat hang thoi gian thi co",
+        "thoi gian thi nhan duoc hang"
+      ],
+      "responses": [
+        "Chúng tôi sẽ giao hàng cho đơn vị vận chuyển trong vòng 1 ngày kể từ khi duyệt đơn hàng. Đơn vị vận chuyển sẽ giao hàng cho bạn trong vòng 7 ngày. Mọi thắc mắc xin liên hệ Admin!"
+      ]
+    },
+    {
+      "tag": "introduce",
+      "patterns": [
+        "gioi thieu webiste",
+        "website kinh doanh gi",
+        "ai la chu website",
+        "cong ty nao la chu website",
+        "website nay cua ai",
+        "ai la chu trang thuong mai dien tu nay",
+        "cong ty nao la chu trang thuong mai dien tu nay"
+      ],
+      "responses": [
+        "Đây là website thương mai điện thử của công ty THHH Hai thành viên A&B kinh doanh quần áo có trụ sở chính tại TP.Hồ Chí Minh! Sự lựa chọn của các bạn là niềm vinh hạnh của chúng tôi!"
+      ]
+    },
+    {
+      "tag": "contact",
+      "patterns": [
+        "lien he admin",
+        "lien he cham soc khach hang",
+        "so dien thoai cham soc khach hang",
+        "so dien thoai admin",
+        "lien lac admin",
+        "lien lac cham soc khach hang",
+        "can feedback",
+        "can tro giup"
+      ],
+      "responses": [
+        "Quý khách hàng cần trợ giúp vui lòng gọi số 0947902015 hoặc gủi mail về địa chỉ toantrungp999@gmail.com hoặc nhắn tin với chúng tôi qua ứng dung chat, chúng tôi sẽ liên lạc với bạn sớm nhất có thể."
+      ]
+    },
+    {
+      "tag": "return_policy",
+      "patterns": [
+        "chinh sach bao hanh",
+        "chinh sach doi tra",
+        "khong vua co doi duoc khong",
+        "khong vua co tra hang duoc khong",
+        "tra hang trong thoi gian bao lau",
+        "doi hang trong thoi gian bao lau",
+        "doi size",
+        "doi size",
+        "thoi gian doi san pham",
+        "thoi gian tra hang",
+        "co the nhan 100% tien khi tra san pham",
+        "tra hang co nhan full tien",
+        "cach thuc tra hang",
+        "cach doi hang",
+        "cach doi san pham",
+        "khi nao duoc hoan tien",
+        "chinh sach hoan tien",
+        "khi nao nhan day du tien",
+        "doi hang co nhan du tien khong",
+        "san pham nao co the hoan tien",
+        "tinh trang san pham hoan tien",
+        "tinh trang san pham co the doi",
+        "san pham nhu the nao co the nhan lai tien",
+        "san pham nhu the nao co the hoan tien"
+      ],
+      "responses": [
+        "Chúng tôi chấp nhận đổi trả hàng khi hàng chưa xé tem trong vòng 15 ngày, sản phẩm không bị hư hao. Trường hợp sản phẩm bị hư hao chúng tôi sẽ hoàn 100% chi phí cũng như phí ship nếu khách hàng chứng minh được là sản phẩm bị hư hao ngay khi nhận hàng! Vui lòng liên hệ Admin để biết thêm thông tin chi tiết!"
+      ]
+    },
+    {
+      "tag": "delivery",
+      "patterns": [
+        "co giao khong shop",
+        "giao hang toan quoc",
+        "o co dat hang duoc khong",
+        "o co order duoc khong",
+        "o co mua duoc khong",
+        "o co mua hang duoc khong",
+        "o co ban khong",
+        "khu vuc giao hang",
+        "tinh co giao hang khong",
+        "thanh pho co giao hang khong",
+        "co the dat hang o",
+        ""
+      ],
+      "responses": [
+        "Chúng tôi hợp tác với đơn vị vận chuyển Viettel Post nên có thể giao hàng trên tất cả các tỉnh thành!"
+      ]
+    },
+    {
+      "tag": "ask_product",
+      "patterns": [
+        "ao thun",
+        "ao khoac",
+        "ao thun",
+        "ao so mi",
+        "quan jean",
+        "quan kaki",
+        "vay ngan",
+        "vay dai",
+        "quan tay",
+        "vay co color",
+        "vay co size",
+        "dam co color",
+        "dam co size",
+        "vay co color con size khong",
+        "vay co size con color khong",
+        "vay co mau con size khong",
+        "dam co size con color khong",
+        "dam co color con size khong",
+        "dam co mau con size khong",
+        "dam size color",
+        "dam con khong",
+        "vay size color",
+        "vay con khong",
+        "mau co color",
+        "mau co size",
+        "mau co color con size khong",
+        "mau co size con color khong",
+        "mau co mau con size khong",
+        "mau co size con color khong",
+        "quan co color",
+        "quan co size",
+        "quan co color con size khong",
+        "mau co size con color khong",
+        "ao co color con size khong",
+        "ao co size con color khong",
+        "tui xach con color khong",
+        "tui xach con khong",
+        "ao thun size color",
+        "ao so mi size color",
+        "quan size color",
+        "tui xach",
+        "non",
+        "mu"
+      ],
+      "responses": [
+        "ask_product"
+      ]
+    },
+     {
+      "tag": "direct_purchase",
+      "patterns": [
+        "co ban truc tiep khong",
+        "co ban offline khong",
+        "mua tai cua hang khong",
+        "ban tai cua hang",
+        "shop co ban truc tiep khong",
+        "mua tai shop khong"
+      ],
+      "responses": [
+        "Của hàng phục vụ tất cả khách hàng từ mua trực tiếp tại địa chỉ 255 Võ Thị Sáu, TP.Thủ Đức, TP.Hồ Chí Minh và trực tuyến"
+      ]
+    },
+    {
+      "tag": "website_uptime",
+      "patterns": [
+        "co the dat hang luc nao",
+        "co the mua hang luc nao",
+        "co the mua hang khi nao",
+        "co the order luc nao",
+        "co the dat hang khi nao",
+        "co the dat hang luc nao",
+        "thoi gian hoat dong cua website",
+        "website co hoat dong 24/7 khong",
+        "toi co the dat hang khi nao",
+        "toi co the mua hang khi nao",
+        "toi co the order khi nao"
+      ],
+      "responses": [
+        "Website hoạt động 24/7, chúng tôi luôn luôn sẵn sàng phục vụ các bạn"
+      ]
+    },
+    {
+      "tag": "address_store",
+      "patterns": [
+        "shop co dia chi",
+        "offline o ngoai",
+        "cua hang o ngoai",
+        "dia chi cua hang",
+        "dia chi cua shop",
+        "dia chi cua offline",
+        "cua hang co dia chi",
+        "offline co dia chi"
+      ],
+      "responses": [
+        "Cửa hàng có địa chỉ tại 255 Võ Thị Sáu, TP.Thủ Đức, TP.Hồ Chí Minh. Mở cửa từ 8h-21h các ngày trong tuần"
+      ]
+    },
+    {
+      "tag": "ask_slow_delivery",
+      "patterns": [
+        "don hang co ma giao hang cham",
+        "don hang co ma chua giao",
+        "don hang co ma chua nhan duoc",
+        "sao ma chua nhan duoc",
+        "sao ma chua giao"
+      ],
+      "responses": [
+        "ask_slow_delivery"
+      ]
+    },
+    {
+      "tag": "ask_brands",
+      "patterns": [
+        "cac brand trang web ban co",
+        "ten cac brand dang co",
+        "danh sach cac brand",
+        "cac brand dang kinh doand",
+        "cac brand dang ban",
+        "website co nhung brand nao",
+        "websie co brand nao",
+        "cua hang co brand nao",
+        "cua hang co nhung brand nao",
+        "cua hang co cac brand nao",
+        "cac brand cua hang dang ban",
+        "cac brand cua hang dang kinh doanh",
+        "cac brand website dang ban",
+        "cac brand website dang kinh doanh",
+        "danh sach cac brand"
+      ],
+      "responses": [
+        "ask_brands"
+      ]
+    },
+    {
+      "tag": "ask_categories",
+      "patterns": [
+        "ban dang kinh doanh cac loai quan ao nao",
+        "ban dang kinh doanh cac loai san pham nao",
+        "danh sach cac loai san pham",
+        "ten cac loai san pham",
+        "ten cac loai quan ao"
+      ],
+      "responses": [
+        "ask_categories"
+      ]
+    },
+    {
+      "tag": "ask_categories-t-shirt",
+      "patterns": [
+        "dang kinh doanh cac loai ao thun",
+        "cac loai ao thun dang ban",
+        "cac loai ao thun dang kinh doanh",
+        "dang ban cac loai ao thun nao",
+        "cac loai ao thun"
+      ],
+      "responses": [
+        "ask_categories-t-shirt"
+      ]
+    },
+    {
+      "tag": "ask_categories-shirt",
+      "patterns": [
+        "dang kinh doanh cac loai ao so mi",
+        "cac loai ao so mi dang ban",
+        "cac loai ao so mi dang kinh doanh",
+        "dang ban cac loai ao so mi nao",
+        "cac loai ao so mi"
+      ],
+      "responses": [
+        "ask_categories-shirt"
+      ]
+    },
+    {
+      "tag": "ask_categories-jacket",
+      "patterns": [
+        "dang kinh doanh cac loai ao khoac",
+        "cac loai ao khoac dang ban",
+        "cac loai ao khoac dang kinh doanh",
+        "dang ban cac loai ao khoac nao",
+        "cac loai ao khoac"
+      ],
+      "responses": [
+        "ask_categories-jacket"
+      ]
+    },
+    {
+      "tag": "ask_categories-jean",
+      "patterns": [
+        "dang kinh doanh cac loai quan jean",
+        "cac loai quan jean dang ban",
+        "cac loai quan jean dang kinh doanh",
+        "dang ban cac loai quan jean nao",
+        "cac loai quan jean"
+      ],
+      "responses": [
+        "ask_categories-jean"
+      ]
+    },
+    {
+      "tag": "ask_how_to_buy",
+      "patterns": [
+        "toi co the mua hang nhu the nao",
+        "toi co the dat hang nhu the nao",
+        "lam sao de mua hang",
+        "lam sao de dat hang",
+        "huong dan mua hang",
+        "huong dan dat hang",
+        "mua hang nhu the nao",
+        "dat hang nhu the nao",
+        "cach mua hang",
+        "cach dat hang",
+        "lam the nao de dat hang",
+        "lam sao de mua hang",
+        "cac buoc mua hang",
+        "cac buoc dat hang"
+      ],
+      "responses": [
+        "ask_how_to_buy"
+      ]
+    },
+    {
+      "tag": "ask_children_wear",
+      "patterns": [
+        "shop co quan ao tre em khong",
+        "shop co do tre em khong",
+        "cua hang co quan ao con nit khong",
+        "cua hang co quan ao do khong",
+        "cac loai quan ao tre em",
+        "danh sach quan ao tre em",
+        "cac loai do tre em",
+        "danh sach do tre em"
+      ],
+      "responses": [
+        "ask_children_wear"
+      ]
+    },
+    {
+      "tag": "ask_pregnant_women_clothes",
+      "patterns": [
+        "shop co quan ao nguoi bau",
+        "shop co do bau khong",
+        "shop co quan ao nguoi mang thai",
+        "shop co do mang thai khong",
+        "cua hang co do bau khong",
+        "cua hang co do mang thai khong",
+        "cac loai quan ao mang thai",
+        "cac loai quan ao bau",
+        "danh sach quan ao nguoi mang thai",
+        "danh sach quan ao nguoi bau",
+        "cac loai do nguoi mang thai",
+        "cac loai do nguoi bau"
+      ],
+      "responses": [
+        "ask_pregnant_women_clothes"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "See you later",
+        "Goodbye",
+        "bye",
+        "Tam biet",
+        "hen gap lai",
+        "noi chuyen voi ban sau",
+        "gap lai ban sau"
+      ],
+      "responses": [
+        "Cảm ơn bạn đã nhắn tin cho chúng tôi. Hẹn gặp lại!",
+        "Goodbye!"
+      ]
+    }
+  ]
+}
