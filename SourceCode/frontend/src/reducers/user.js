@@ -1,15 +1,15 @@
 import * as Types from "../constants/UserActTypes";
 import * as ServerMessageError from "../constants/ServerMessageError";
 import * as Message from "../constants/Message";
-import Cookie from 'js-cookie';
-import { findIndexById } from '../extentions/ArrayEx';
-const userInfo = Cookie.getJSON('userInfo') || null;
+import Cookie from "js-cookie";
+import { findIndexById } from "../extentions/ArrayEx";
+const userInfo = Cookie.getJSON("userInfo") || null;
 
 const initialStateUser = { userInfo };
 function userInfoReducer(state = initialStateUser, action) {
   switch (action.type) {
     case Types.USER_SIGNIN_REQUEST:
-      return { loading: true }
+      return { loading: true };
     case Types.USER_SIGNIN_SUCCESS:
       return { loading: false, userInfo: action.payload.data };
     case Types.USER_SIGNIN_FAIL:
@@ -25,39 +25,57 @@ function userInfoReducer(state = initialStateUser, action) {
       return { loading: false, inform: action.payload.message };
     case Types.USER_PROFILE_UPDATE_SUCCESS:
       state.userInfo.name = action.payload.data.name;
-      Cookie.set('userInfo', JSON.stringify(state.userInfo), { path: '/', expires: new Date(Date.now() + 864000000) });
+      Cookie.set("userInfo", JSON.stringify(state.userInfo), {
+        path: "/",
+        expires: new Date(Date.now() + 864000000),
+      });
       return { ...state };
     case Types.USER_AVATAR_SUCCESS:
       state.userInfo.image = action.payload.data;
-      Cookie.set('userInfo', JSON.stringify(state.userInfo), { path: '/', expires: new Date(Date.now() + 864000000) });
+      Cookie.set("userInfo", JSON.stringify(state.userInfo), {
+        path: "/",
+        expires: new Date(Date.now() + 864000000),
+      });
       return { ...state };
-    default: return state;
+    default:
+      return state;
   }
 }
 
 function userForgotPasswordReducer(state = {}, action) {
   switch (action.type) {
     case Types.USER_FORGOTPASSWORD_REQUEST:
-      return { loadingForgot: true }
+      return { loadingForgot: true };
     case Types.USER_FORGOTPASSWORD_SUCCESS:
       return { loadingForgot: false, statusForgot: true };
     case Types.USER_FORGOTPASSWORD_FAIL:
-      return { loadingForgot: false, statusForgot: false, message: action.payload.message };
+      return {
+        loadingForgot: false,
+        statusForgot: false,
+        message: action.payload.message,
+      };
     case Types.USER_RESET_PASSSWORD_REQUEST:
-      return { loadingReset: true }
+      return { loadingReset: true };
     case Types.USER_RESET_PASSSWORD_SUCCESS:
       return { loadingReset: false, statusReset: true };
     case Types.USER_RESET_PASSSWORD_FAIL:
-      state.loadingReset = false; state.statusReset = false; state.message = action.payload.message;
-      return { loadingReset: false, statusReset: false, message: action.payload.message }
-    default: return state;
+      state.loadingReset = false;
+      state.statusReset = false;
+      state.message = action.payload.message;
+      return {
+        loadingReset: false,
+        statusReset: false,
+        message: action.payload.message,
+      };
+    default:
+      return state;
   }
 }
 
 function userRegisterReducer(state = {}, action) {
   switch (action.type) {
     case Types.USER_REGISTER_REQUEST:
-      return { loading: true }
+      return { loading: true };
     case Types.USER_REGISTER_SUCCESS:
       return { loading: false };
     case Types.USER_REGISTER_FAIL:
@@ -65,16 +83,20 @@ function userRegisterReducer(state = {}, action) {
       if (message === ServerMessageError.EMAIL_ALREADY_EXIST)
         message = Message.EMAIL_ALREADY_EXIST_VN;
       return { loading: false, message };
-    default: return state;
+    default:
+      return state;
   }
 }
 
-function userProfileReducer(state = { loading: false, userProfile: {}, messege: '' }, action) {
+function userProfileReducer(
+  state = { loading: false, userProfile: {}, messege: "" },
+  action
+) {
   switch (action.type) {
     case Types.USER_PROFLE_REQUEST:
-      return { loading: true }
+      return { loading: true };
     case Types.USER_PROFILE_SUCCESS:
-      return { loading: false, userProfile: action.payload.data }
+      return { loading: false, userProfile: action.payload.data };
     case Types.USER_PROFILE_UPDATE_SUCCESS:
       return { loading: false, userProfile: action.payload.data };
     case Types.USER_PROFILE_FAIL:
@@ -86,15 +108,16 @@ function userProfileReducer(state = { loading: false, userProfile: {}, messege: 
       state.userProfile.image = action.payload.data;
       return { ...state };
     case Types.CLEAR_INFORM_PROFILE:
-      state.message = '';
+      state.message = "";
       state.updateProfileSuccess = null;
       return { ...state };
-    default: return state;
+    default:
+      return state;
   }
 }
 
 function userActionReducer(state = { loading: false }, action) {
-  let message = '';
+  let message = "";
   switch (action.type) {
     case Types.USER_PROFLE_UPDATE_REQUEST:
       return { loading: true };
@@ -109,7 +132,7 @@ function userActionReducer(state = { loading: false }, action) {
     case Types.USER_AVATAR_FAIL:
       return { loading: false, changeAvatarmessage: action.payload.message };
     case Types.USER_CHANGEPASSWORD_REQUEST:
-      return { loading: true }
+      return { loading: true };
     case Types.USER_CHANGEPASSWORD_SUCCESS:
       return { loading: false, changePasswordSuccess: true };
     case Types.USER_CHANGEPASSWORD_FAIL:
@@ -118,7 +141,7 @@ function userActionReducer(state = { loading: false }, action) {
       //   message = Message.PASSWORD_NOT_CORRECT_VN;
       return { loading: false, changePasswordMessage: message };
     case Types.USER_CHANGEPHONE_REQUEST:
-      return { loading: true }
+      return { loading: true };
     case Types.USER_CHANGEPHONE_SUCCESS:
       return { loading: false, changePhoneSuccess: true };
     case Types.USER_CHANGEPHONE_FAIL:
@@ -127,18 +150,19 @@ function userActionReducer(state = { loading: false }, action) {
       //   message = Message.PASSWORD_NOT_CORRECT_VN;
       return { loading: false, changePhoneMessage: message };
     case Types.CLEAR_INFORM_CHANHEPHONE:
-      state.changePhoneMessage = '';
+      state.changePhoneMessage = "";
       state.changePhoneSuccess = null;
       return { ...state };
     case Types.CLEAR_INFORM_CHANGEPASSWORD:
-      state.changePasswordMessage = '';
+      state.changePasswordMessage = "";
       state.changePasswordSuccess = null;
       return { ...state };
     case Types.CLEAR_INFORM_PROFILE:
-      state.changeAvatarMessage = '';
+      state.changeAvatarMessage = "";
       state.changeAvatarSuccess = null;
       return { ...state };
-    default: return state;
+    default:
+      return state;
   }
 }
 
@@ -146,15 +170,15 @@ function userAddressReducer(state = { loading: false }, action) {
   var index = -1;
   switch (action.type) {
     case Types.USER_ADDRESSES_REQUEST:
-      return { loading: true }
+      return { loading: true };
     case Types.USER_ADDRESSES_SUCCESS:
       return { loading: false, addresses: action.payload.data };
     case Types.USER_ADDRESSES_FAIL:
       return { loading: false, message: action.payload.message };
     ///
     case Types.USER_ADD_ADDRESS_REQUEST:
-      state.message = '';
-      state.messageAction = '';
+      state.message = "";
+      state.messageAction = "";
       state.loadingAddAddress = true;
       state.statusAddAddress = false;
       state.statusUpdateAddress = false;
@@ -171,8 +195,8 @@ function userAddressReducer(state = { loading: false }, action) {
       return { ...state };
     ///
     case Types.USER_UPDATE_ADDRESS_REQUEST:
-      state.message = '';
-      state.messageAction = '';
+      state.message = "";
+      state.messageAction = "";
       state.loadingUpdateAddress = true;
       state.statusAddAddress = false;
       state.statusUpdateAddress = false;
@@ -196,8 +220,8 @@ function userAddressReducer(state = { loading: false }, action) {
       return { ...state };
     ///
     case Types.USER_DELETE_ADDRESS_REQUEST:
-      state.message = '';
-      state.messageAction = '';
+      state.message = "";
+      state.messageAction = "";
       state.loadingDeleteAddress = true;
       state.statusAddAddress = false;
       state.statusUpdateAddress = false;
@@ -208,17 +232,22 @@ function userAddressReducer(state = { loading: false }, action) {
       state.statusDeleteAddress = true;
       var addressId = action.payload.data;
       index = findIndexById(state.addresses, addressId);
-      if (index >= 0)
-        state.addresses.splice(index, 1);
+      if (index >= 0) state.addresses.splice(index, 1);
       return { ...state };
     case Types.USER_DELETE_ADDRESS_FAIL:
       state.loadingDeleteAddress = false;
       state.message = action.payload.message;
       return { ...state };
-    default: return state;
+    default:
+      return state;
   }
 }
 
 export {
-  userInfoReducer, userForgotPasswordReducer, userRegisterReducer, userProfileReducer, userActionReducer, userAddressReducer
-}
+  userInfoReducer,
+  userForgotPasswordReducer,
+  userRegisterReducer,
+  userProfileReducer,
+  userActionReducer,
+  userAddressReducer,
+};

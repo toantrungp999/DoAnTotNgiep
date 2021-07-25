@@ -3,9 +3,13 @@ import * as Types from "../constants/UsersActTypes";
 function usersReducer(state = { loading: true }, action) {
   switch (action.type) {
     case Types.USERS_REQUEST:
-      return { loading: true }
+      return { loading: true };
     case Types.USERS_SUCCESS:
-      return { loading: false, users: action.payload.data.users, pagingInfo: action.payload.data.pagingInfo };
+      return {
+        loading: false,
+        users: action.payload.data.users,
+        pagingInfo: action.payload.data.pagingInfo,
+      };
     case Types.USERS_FAIL:
       return { loading: false, message: action.payload.message };
     case Types.USERS_SEARCH_REQUEST:
@@ -23,27 +27,28 @@ function usersReducer(state = { loading: true }, action) {
     case Types.USERS_SEARCH_FAIL:
       state.loadingSearchUsers = false;
       return { ...state };
-    default: return state;
+    default:
+      return state;
   }
 }
 
 function allUserReducer(state = {}, action) {
   switch (action.type) {
-      case Types.USERS_GET_ALL_REQUEST:
-          return { loading: true }
-      case Types.USERS_GET_ALL_SUCCESS:
-          return { loading: false, users: action.payload.data };
-      case Types.USERS_GET_ALL_FAIL:
-          return { loading: false, message: action.payload.message };
-      default: return state;
+    case Types.USERS_GET_ALL_REQUEST:
+      return { loading: true };
+    case Types.USERS_GET_ALL_SUCCESS:
+      return { loading: false, users: action.payload.data };
+    case Types.USERS_GET_ALL_FAIL:
+      return { loading: false, message: action.payload.message };
+    default:
+      return state;
   }
 }
-
 
 function userDetailReducer(state = { loading: true }, action) {
   switch (action.type) {
     case Types.USER_DETAIL_REQUEST:
-      return { loading: true }
+      return { loading: true };
     case Types.USER_UPDATE_REQUEST:
       state.loading = false;
       return state;
@@ -56,8 +61,9 @@ function userDetailReducer(state = { loading: true }, action) {
       return { loading: false, user: state.user, success: true };
     case Types.USER_DETAIL_FAIL:
       return { loading: false, message: action.payload.message };
-    default: return state;
+    default:
+      return state;
   }
 }
 
-export { usersReducer, userDetailReducer, allUserReducer }
+export { usersReducer, userDetailReducer, allUserReducer };

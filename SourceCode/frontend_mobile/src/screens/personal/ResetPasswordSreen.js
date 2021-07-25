@@ -1,204 +1,218 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { View, StyleSheet, ScrollView, Alert } from 'react-native';
-import { Text } from 'react-native-paper';
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import {View, StyleSheet, ScrollView, Alert} from 'react-native';
+import {Text} from 'react-native-paper';
 import Background from '../../components/Background';
 import Header from '../../components/Header';
 import Button from '../../components/Button';
 import TextInput from '../../components/TextInput';
 import BackButton from '../../components/BackButton';
-import { theme } from '../../core/theme';
-import {
-    resetPasswordRequest
-} from '../../../actions/userActions';
+import {theme} from '../../core/theme';
+import {resetPasswordRequest} from '../../../actions/userActions';
 
 class ResetPasswordSreen extends Component {
-
-    constructor(props) {
-        super(props);
-        this.state = {
-            accessToken: '',
-            newPassword: '',
-            rePassword: '',
-            errors: {
-                newPassword: '',
-                rePassword: ''
-            },
-        };
-    }
-
-    checkValidate = (name, value) => {
-        let errors = this.state.errors;
-        switch (name) {
-            case 'newPassword':
-                if (value.length === 0)
-                    errors.newPassword = 'Chưa nhập';
-                else if (value.length < 6 || value.length > 255)
-                    errors.newPassword = 'Mật khẩu phải từ 6 - 255 ký tự';
-                else
-                    errors.newPassword = '';
-                errors.rePassword = (this.state.rePassword !== value) ? 'Mật khẩu không khớp' : '';
-                break;
-            case 'rePassword':
-                errors.rePassword = (this.state.newPassword !== value) ? 'Mật khẩu không khớp' : '';
-                break;
-            default: break;
-        }
-        this.setState({ errors });
-    }
-
-    validateForm = errors => {
-        let valid = true;
-        if (!errors)
-            return true;
-        Object.values(errors).forEach(val => val.length > 0 && (valid = false));
-        return valid;
+  constructor(props) {
+    super(props);
+    this.state = {
+      accessToken: '',
+      newPassword: '',
+      rePassword: '',
+      errors: {
+        newPassword: '',
+        rePassword: '',
+      },
     };
+  }
 
-    componentDidUpdate(prevProps) {
-        if (this.props.userForgotPasswordReducer !== prevProps.userForgotPasswordReducer && this.props.userForgotPasswordReducer.statusReset === true) {
-            Alert.alert(
-                "Thông báo",
-                "Đặt lại mật khẩu thành công",
-                [
-                    {
-                        text: "Xác nhận",
-                        onPress: () => this.props.navigation.navigate('LoginScreen')
-                    },
-                ]);
-        }
+  checkValidate = (name, value) => {
+    let errors = this.state.errors;
+    switch (name) {
+      case 'newPassword':
+        if (value.length === 0) errors.newPassword = 'Chưa nhập';
+        else if (value.length < 6 || value.length > 255)
+          errors.newPassword = 'Mật khẩu phải từ 6 - 255 ký tự';
+        else errors.newPassword = '';
+        errors.rePassword =
+          this.state.rePassword !== value ? 'Mật khẩu không khớp' : '';
+        break;
+      case 'rePassword':
+        errors.rePassword =
+          this.state.newPassword !== value ? 'Mật khẩu không khớp' : '';
+        break;
+      default:
+        break;
     }
+    this.setState({errors});
+  };
 
-    onChange = (name, value) => {
-        this.checkValidate(name, value);
-        this.setState({
-            [name]: value
-        });
-    };
+  validateForm = errors => {
+    let valid = true;
+    if (!errors) return true;
+    Object.values(errors).forEach(val => val.length > 0 && (valid = false));
+    return valid;
+  };
 
-    onUpdatePassword = () => {
-        if (!this.validateForm(this.errors))
-            return;
-        const { newPassword, accessToken } = this.state;
-        if (newPassword) {
-            this.props.resetPassword(newPassword, accessToken);
-            this.setState({ newPassword: '', rePassword: '' });
-        }
+  componentDidUpdate(prevProps) {
+    if (
+      this.props.userForgotPasswordReducer !==
+        prevProps.userForgotPasswordReducer &&
+      this.props.userForgotPasswordReducer.statusReset === true
+    ) {
+      Alert.alert('Thông báo', 'Đặt lại mật khẩu thành công', [
+        {
+          text: 'Xác nhận',
+          onPress: () => this.props.navigation.navigate('LoginScreen'),
+        },
+      ]);
     }
+  }
 
-    componentDidMount() {
-        const { accessToken } = this.props.userForgotPasswordReducer;
-        this.setState({ accessToken });
+  onChange = (name, value) => {
+    this.checkValidate(name, value);
+    this.setState({
+      [name]: value,
+    });
+  };
+
+  onUpdatePassword = () => {
+    if (!this.validateForm(this.errors)) return;
+    const {newPassword, accessToken} = this.state;
+    if (newPassword) {
+      this.props.resetPassword(newPassword, accessToken);
+      this.setState({newPassword: '', rePassword: ''});
     }
+  };
 
-    render() {
-        const { loading, message } = this.props.userForgotPasswordReducer;
+  componentDidMount() {
+    const {accessToken} = this.props.userForgotPasswordReducer;
+    this.setState({accessToken});
+  }
 
-        return (
-            <ScrollView style={{ width: '100%',height:'100%' }}>
-                <Background style={styles.containerMain}>
-                    <View style={{ marginTop: 30 }}></View>
-                    <BackButton goBack={this.props.navigation.goBack} />
-                    <Header>Đặt lại mật khẩu</Header>
-                    <TextInput
-                        label="Mật khẩu mới"
-                        returnKeyType="next"
-                        value={this.state.newPassword}
-                        onChangeText={(text) => this.onChange('newPassword', text)}
-                        error={!!this.state.errors.newPassword}
-                        errorText={this.state.errors.newPassword}
-                        secureTextEntry />
-                    <TextInput
-                        label="Nhập lại mật khẩu mới"
-                        returnKeyType="next"
-                        value={this.state.rePassword}
-                        onChangeText={(text) => this.onChange('rePassword', text)}
-                        error={!!this.state.errors.rePassword}
-                        errorText={this.state.errors.rePassword}
-                        secureTextEntry />
-                    <View style={styles.row}>
-                        <Text style={{ color: 'red' }}>{message || ''}</Text>
-                    </View>
-                    {
-                        loading
-                            ?
-                            <Button
-                                mode="contained"
-                                style={{ marginTop: 24 }}>
-                                LOADING...
-                        </Button>
-                            :
-                            <Button
-                                mode="contained"
-                                onPress={this.onUpdatePassword}
-                                style={{ marginTop: 24 }}>
-                                Đặt lại mật khẩu
-                        </Button>
-                    }
-                </Background>
-            </ScrollView>
-        )
-    }
+  render() {
+    const {loading, message} = this.props.userForgotPasswordReducer;
+
+    return (
+      <ScrollView style={{width: '100%', height: '100%'}}>
+        <Background style={styles.containerMain}>
+          <View style={{marginTop: 30}}></View>
+          <BackButton goBack={this.props.navigation.goBack} />
+          <Header>Đặt lại mật khẩu</Header>
+          <TextInput
+            label="Mật khẩu mới"
+            returnKeyType="next"
+            value={this.state.newPassword}
+            onChangeText={text => this.onChange('newPassword', text)}
+            error={!!this.state.errors.newPassword}
+            errorText={this.state.errors.newPassword}
+            secureTextEntry
+          />
+          <TextInput
+            label="Nhập lại mật khẩu mới"
+            returnKeyType="next"
+            value={this.state.rePassword}
+            onChangeText={text => this.onChange('rePassword', text)}
+            error={!!this.state.errors.rePassword}
+            errorText={this.state.errors.rePassword}
+            secureTextEntry
+          />
+          <View style={styles.row}>
+            <Text style={{color: 'red'}}>{message || ''}</Text>
+          </View>
+          {loading ? (
+            <Button mode="contained" style={{marginTop: 24}}>
+              LOADING...
+            </Button>
+          ) : (
+            <Button
+              mode="contained"
+              onPress={this.onUpdatePassword}
+              style={{marginTop: 24}}>
+              Đặt lại mật khẩu
+            </Button>
+          )}
+        </Background>
+      </ScrollView>
+    );
+  }
 }
 
 const styles = StyleSheet.create({
-    containerMain: {
-        height: '100%',
-        width: '100%',
-        alignItems: 'center',
-        justifyContent: 'center'
-    },
-    bottomView: {
-        width: '100%',
-        borderTopLeftRadius: 30,
-        borderTopRightRadius: 30,
-        backgroundColor: 'white',
-        position: 'absolute',
-        bottom: 0,
-    },
-    row: {
-        flexDirection: 'row', width: '100%',
-        marginTop: 4
-    },
-    bottom: {
-        flexDirection: 'row', width: '100%',
-        marginTop: 4, justifyContent: 'center',
-        marginBottom: 50
-    },
-    col_35: {
-        width: "35%", marginTop: 25
-    },
-    link: {
-        fontWeight: 'bold',
-        color: theme.colors.primary,
-    },
-    col_50_male: {
-        flexDirection: 'row', width: '50%', textAlignVertical: 'center'
-    },
-    image: {
-        width: 110,
-        height: 110,
-        marginBottom: 8,
-        borderRadius: 55,
-        borderColor: 'white',
-        borderWidth: 3
-    },
-    rowModal: { opacity: 0.6, flexDirection: 'row', alignItems: 'center', width: '100%', paddingLeft: 10, paddingTop: 15, paddingBottom: 15 },
-    textRowModal: { fontSize: 18, paddingLeft: 15, fontWeight: "bold", color: 'black' }
-})
+  containerMain: {
+    height: '100%',
+    width: '100%',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  bottomView: {
+    width: '100%',
+    borderTopLeftRadius: 30,
+    borderTopRightRadius: 30,
+    backgroundColor: 'white',
+    position: 'absolute',
+    bottom: 0,
+  },
+  row: {
+    flexDirection: 'row',
+    width: '100%',
+    marginTop: 4,
+  },
+  bottom: {
+    flexDirection: 'row',
+    width: '100%',
+    marginTop: 4,
+    justifyContent: 'center',
+    marginBottom: 50,
+  },
+  col_35: {
+    width: '35%',
+    marginTop: 25,
+  },
+  link: {
+    fontWeight: 'bold',
+    color: theme.colors.primary,
+  },
+  col_50_male: {
+    flexDirection: 'row',
+    width: '50%',
+    textAlignVertical: 'center',
+  },
+  image: {
+    width: 110,
+    height: 110,
+    marginBottom: 8,
+    borderRadius: 55,
+    borderColor: 'white',
+    borderWidth: 3,
+  },
+  rowModal: {
+    opacity: 0.6,
+    flexDirection: 'row',
+    alignItems: 'center',
+    width: '100%',
+    paddingLeft: 10,
+    paddingTop: 15,
+    paddingBottom: 15,
+  },
+  textRowModal: {
+    fontSize: 18,
+    paddingLeft: 15,
+    fontWeight: 'bold',
+    color: 'black',
+  },
+});
 
 const mapStateToProps = state => {
-    return {
-        userForgotPasswordReducer: state.userForgotPasswordReducer,
-    }
-}
+  return {
+    userForgotPasswordReducer: state.userForgotPasswordReducer,
+  };
+};
 
 const mapDispatchToProps = (dispatch, props) => {
-    return {
-        resetPassword: (password, accessToken) => {
-            dispatch(resetPasswordRequest(password, accessToken))
-        }
-    }
-}
+  return {
+    resetPassword: (password, accessToken) => {
+      dispatch(resetPasswordRequest(password, accessToken));
+    },
+  };
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(ResetPasswordSreen);

@@ -1,43 +1,44 @@
 const timeDifference = (current, previous) => {
-  const milliSecondsPerMinute = 60 * 1000
-  const milliSecondsPerHour = milliSecondsPerMinute * 60
-  const milliSecondsPerDay = milliSecondsPerHour * 24
-  const milliSecondsPerMonth = milliSecondsPerDay * 30
-  const milliSecondsPerYear = milliSecondsPerDay * 365
+  const milliSecondsPerMinute = 60 * 1000;
+  const milliSecondsPerHour = milliSecondsPerMinute * 60;
+  const milliSecondsPerDay = milliSecondsPerHour * 24;
+  const milliSecondsPerMonth = milliSecondsPerDay * 30;
+  const milliSecondsPerYear = milliSecondsPerDay * 365;
 
-  const elapsed = current - previous
+  const elapsed = current - previous;
 
   if (elapsed < milliSecondsPerMinute / 3) {
-    return 'just now'
+    return 'just now';
   }
 
   if (elapsed < milliSecondsPerMinute) {
-    return 'less than 1 min'
+    return 'less than 1 min';
   } else if (elapsed < milliSecondsPerHour) {
-    return Math.round(elapsed / milliSecondsPerMinute) + ' min'
+    return Math.round(elapsed / milliSecondsPerMinute) + ' min';
   } else if (elapsed < milliSecondsPerDay) {
-    return Math.round(elapsed / milliSecondsPerHour) + ' h'
+    return Math.round(elapsed / milliSecondsPerHour) + ' h';
   } else if (elapsed < milliSecondsPerMonth) {
-    let days = Math.round(elapsed / milliSecondsPerDay)
-    return `${days} day${days > 1 ? 's' : ''}`
+    let days = Math.round(elapsed / milliSecondsPerDay);
+    return `${days} day${days > 1 ? 's' : ''}`;
   } else if (elapsed < milliSecondsPerYear) {
-    return Math.round(elapsed / milliSecondsPerMonth) + ' mo'
+    return Math.round(elapsed / milliSecondsPerMonth) + ' mo';
   } else {
-    return Math.round(elapsed / milliSecondsPerYear) + ' years'
+    return Math.round(elapsed / milliSecondsPerYear) + ' years';
   }
-}
+};
 
 const timeDifferenceForDate = date => {
-  const now = new Date().getTime()
-  const updated = new Date(date).getTime()
+  const now = new Date().getTime();
+  const updated = new Date(date).getTime();
 
-  return timeDifference(now, updated)
-}
+  return timeDifference(now, updated);
+};
 
-const formatDate = d => [
-  d.getDate().toString().padStart(2, '0'),
-  (d.getMonth() + 1).toString().padStart(2, '0'),
-  d.getFullYear()
-].join('-');
+const formatDate = d =>
+  [
+    d.getDate().toString().padStart(2, '0'),
+    (d.getMonth() + 1).toString().padStart(2, '0'),
+    d.getFullYear(),
+  ].join('-');
 
-export {formatDate, timeDifference, timeDifferenceForDate }
+export {formatDate, timeDifference, timeDifferenceForDate};

@@ -7,16 +7,16 @@ const mansonry = (items, propName) => {
             ...p,
             leftCol: [...p.leftCol, c],
             leftHeight: p.leftHeight + c[propName],
-          }
+          };
         } else {
           return {
             ...p,
             rightCol: [...p.rightCol, c],
             rightHeight: p.rightHeight + c[propName],
-          }
+          };
         }
       } else {
-        return p
+        return p;
       }
     },
     {
@@ -24,8 +24,8 @@ const mansonry = (items, propName) => {
       rightCol: [items[1]],
       leftHeight: items[0].imageHeight,
       rightHeight: items[1].imageHeight,
-    }
-  )
-}
+    },
+  );
+};
 
-export { mansonry }
+export {mansonry};

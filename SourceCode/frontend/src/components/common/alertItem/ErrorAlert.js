@@ -13,14 +13,14 @@
 //         if(this.props.show === true){
 //             setTimeout(() => {
 //                 this.onHide();
-//             }, 4000);   
+//             }, 4000);
 //         }
 //     }
 
 //     onHide = () => {
 //         this.props.onHideAlert();
 //     }
-    
+
 //     render() {
 //         return (
 //             <Slide in={this.props.show} direction="down">

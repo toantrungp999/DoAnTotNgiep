@@ -1,0 +1,18 @@
+các trạng thái status trong body response
+-6 tài khoản bị khóa
+-5 đăng nhập thất bại
+-199 lỗi dữ liệu đầu vào
+-200 lỗi nào đó chưa xác định
+-201 lỗi không đủ quyền
+-1 lỗi chưa đăng nhập
+0 thành công
+
+trạng thái đăng nhập
+
+0 đăng nhập thành công
+
+
+
+các trạng thái status trong reponese trả về
+200 bình thường
+504 lỗi server

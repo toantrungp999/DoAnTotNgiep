@@ -2,13 +2,12 @@ const jwt = require("jsonwebtoken");
 
 /**
  * private function generateToken
- * @param user 
- * @param secretSignature 
- * @param tokenLife 
+ * @param user
+ * @param secretSignature
+ * @param tokenLife
  */
 let generateToken = (user, secretSignature, tokenLife) => {
   return new Promise((resolve, reject) => {
-
     jwt.sign(
       { data: user },
       secretSignature,
@@ -21,14 +20,15 @@ let generateToken = (user, secretSignature, tokenLife) => {
           return reject(error);
         }
         resolve(token);
-      });
+      }
+    );
   });
-}
+};
 
 /**
  * This module used for verify jwt token
- * @param {*} token 
- * @param {*} secretKey 
+ * @param {*} token
+ * @param {*} secretKey
  */
 let verifyToken = (token, secretKey) => {
   return new Promise((resolve, reject) => {
@@ -39,7 +39,7 @@ let verifyToken = (token, secretKey) => {
       resolve(decoded);
     });
   });
-}
+};
 
 module.exports = {
   generateToken: generateToken,

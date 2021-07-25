@@ -1,9 +1,9 @@
 import React from 'react';
-import { View, StyleSheet, Text } from 'react-native';
-import { Picker } from '@react-native-community/picker';
-import { theme } from '../core/theme'
+import {View, StyleSheet, Text} from 'react-native';
+import {Picker} from '@react-native-community/picker';
+import {theme} from '../core/theme';
 
-const MyPicker = ({ errorText, description, ...props }) => (
+const MyPicker = ({errorText, description, ...props}) => (
   <View style={styles.container}>
     <View style={styles.boderPicker}>
       <Picker {...props} />
@@ -13,7 +13,7 @@ const MyPicker = ({ errorText, description, ...props }) => (
     ) : null}
     {errorText ? <Text style={styles.error}>{errorText}</Text> : null}
   </View>
-)
+);
 
 const styles = StyleSheet.create({
   container: {
@@ -22,9 +22,10 @@ const styles = StyleSheet.create({
     borderWidth: 0,
   },
   boderPicker: {
-    borderRadius: 10, borderWidth: 1,
+    borderRadius: 10,
+    borderWidth: 1,
     backgroundColor: theme.colors.surface,
-    borderColor: "rgb(181,181,181)"
+    borderColor: 'rgb(181,181,181)',
   },
   input: {
     backgroundColor: theme.colors.surface,
@@ -39,6 +40,6 @@ const styles = StyleSheet.create({
     color: theme.colors.error,
     paddingTop: 8,
   },
-})
+});
 
-export default MyPicker
+export default MyPicker;
