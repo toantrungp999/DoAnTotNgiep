@@ -147,6 +147,9 @@ router.get("/addresses", verify, async (req, res) => {
   try {
     const { _id } = req.user;
     const _user = await User.findOne({ _id, status: true });
+    for (var i = _user.addresses.length - 1; i >= 0; i--) {
+      if (!_user.addresses[i].status) _user.addresses.splice(i, 1);
+    }
     res.send(new Respones(0, _user.addresses));
   } catch (error) {
     res.send(new Respones(STATUS.UNKNOWN_EEROR, null, error.message));
