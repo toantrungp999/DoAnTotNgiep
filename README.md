@@ -22,3 +22,5 @@
 
 
 Trong tương lai gần sẽ tái cấu trúc frontend.
+
+Link demo: https://trung-fashion-store.herokuapp.com
